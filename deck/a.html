@@ -1,0 +1,2529 @@
+<html  >
+<head>
+<title>About This System</title>
+	
+<link rel="stylesheet" type="text/css" href="ZEN_SVGComponent.css"/>
+<link rel="shortcut icon" href="portal/ISC_IRIS_icon.ico">
+<link rel="stylesheet" type="text/css" href="ZEN_Component__core.css"/>
+<link rel="stylesheet" type="text/css" href="ZEN_Component_csMenuSeparator.css"/>
+<style id="zenStyleSection" type="text/css"></style>
+<!-- Style: %CSP.UI.Portal.Application -->
+<!-- Style: %CSP.UI.Portal.Application -->
+<style type="text/css">
+body {
+font-family: Futura,Arial,sans-serif;
+}
+.formTitle {
+color:#000000;
+font-family: Futura,Arial,sans-serif;
+font-size: 18px;
+font-weight: bold;
+letter-spacing: 0.75px;
+margin: 20px;
+}
+/* overrider locator bar style */
+.locatorBarTable td {
+background: rgb(53,107,141);
+background-image: none;
+background-repeat: repeat-x;
+border-bottom: 1px darkblue solid;
+padding-bottom: 1px;
+color: white;
+}
+.locatorBarLinks {
+color: white;
+}
+.locatorBarLinks a {
+color: white;
+}
+.locatorBarLinks a:visited {
+color: white;
+}
+.locatorBarLinks a:hover {
+color: darkred;
+background: #FFFAE7;
+}
+.locatorBarSelect {
+color: white;
+}
+.portalPropertyPanelTitle {
+color: white;
+font-size: 12pt;
+padding: 5px;
+}
+.portalPropertyPanelCommands {
+color: white;
+background: rgb(53,107,141);
+width: 100px;
+text-align: center;
+font-size: 9pt;
+border: 1px solid #CBCBCB;
+}
+.portalTitle {
+width: 100%;
+height: 100px;
+position: relative;
+box-shadow:0 2px 8px 0 rgba(0,0,0,0.12);
+box-sizing: border-box;
+}
+.portalTitleInfoBox {
+position: absolute;
+bottom: 0px;
+left: 350px;
+box-shadow:0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.portalTitleInfoLabel {
+padding-left: 10px;
+font-size: 9pt;
+color: #606060;
+text-align: left;
+}
+.portalTitleInfoVal {
+font-size: 9pt;
+color: black;
+text-align: left;
+font-weight: bold;
+}
+.portalLostConnectivityWarn {
+font-family: Futura,Arial,sans-serif;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 0.75px;
+text-align: center;
+background: #aa4040;
+color:#ffffff;
+border-radius: 4px;
+padding: 6px 20px;
+margin-left: 20px;
+}
+.portalTitleListBox {
+position: absolute;
+top: 5px;
+left: 20px;
+font-size: 9pt;
+}
+.portalTitleMenuBox {
+position: absolute;
+top: 20px;
+left: 900px;
+font-size: 14px;
+}
+.portalTitleLink {
+color: #000000;
+font-family: Futura,Arial,sans-serif;
+font-size: 14px;
+font-weight: 600;
+padding: 2px;
+text-decoration: none;
+}
+.pageTitleText {
+color: #333695;
+font-family: Futura,Arial,sans-serif;
+font-size: 12px;
+font-weight: 550;
+text-docoration: none;
+}
+.portalServerLink {
+color: #333695;
+font-family: Futura,Arial,sans-serif;
+font-size: 12px;
+font-weight: 550;
+text-decoration: underline;
+}
+.portalLocatorLink {
+text-decoration: none;
+}
+.portalTitleLink:hover,.portalServerLink:hover,.portalLocatorLink:hover {
+color: #00A09A;
+transition: color 0.03 ease;
+}
+.portalTitleTabBox {
+position: absolute;
+color: white;
+font-size: 16px;
+bottom: 0px;
+left: 20px;
+width: 300px;
+height: 25px;
+padding-left: 15px;
+padding-right: 15px;
+padding: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+overflow: hidden;
+}
+.portalLogoBox {
+position: absolute;
+top: 0px;
+padding: 3px;
+padding-bottom: 4px;
+padding-right: 15px;
+left: 10px;
+width:210px;
+z-index: 3;
+}
+.topLine {
+border-top: 2px solid #333695;
+}
+.portalLogo {
+position: relative;
+top: 0px;
+left: 10px;
+padding: 2px;
+padding-left: 5px;
+padding-right: 5px;
+width:210px;
+height:50px;
+font-weight: bold;
+font-size: 12pt;
+}
+/* overrides of Finder styles */
+.finderItemSelected {
+background: #bfe4e3;
+border: 1px solid #cbcbcb;
+color: #303030;
+}
+.finderItemSelected a {
+color: #303030;
+}
+.finderListRowSelected {
+background: #bfe4e3;  /*#2F6280;*/
+}
+.finderItem, .finderItemOdd,.finderItemSelected, .finderItemDisabled {
+border-bottom: 1px solid #CBCBCB;
+}
+.finderItem a, .finderItemOdd a {
+color: #303030;
+}
+/* command button styles */
+.commandButton {
+background: #FFFFFF;
+color: #333695;
+text-decoration: none;
+padding: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 4px;
+border: 1px solid #333695;
+}
+.commandButton,.commandButtonRemove,.commandButtonDisabled {
+color: #333695;
+cursor: pointer;
+background: #ffffff;
+border: 2px solid #333695;
+border-radius: 4px;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.75px;
+text-align: center;
+text-decoration: none;
+padding: 6px 20px;
+}
+.commandButtonRemove {
+background: #333695;
+color: white;
+}
+.commandButtonDisabled {
+background: #ffffff;
+color: #979797;
+cursor: none;
+border: 2px solid #979797;
+}
+.commandButton:hover {
+border: 2px solid #00A09A;
+color: #00A09A;
+transition: color 0.03 ease;
+}
+.commandButtonRemove:hover {
+border: 4px solid white;
+}
+img {
+border: none;
+}
+/* overrides of tablePane */
+table.tpTable {
+font-family: Futura,Arial,sans-serif;	font-size: 12px;
+border: 2px solid #CBCBCB;
+padding: 2px;
+}
+/* @doc="Column header." */
+table.tpTable th {
+color: #3b84bc;
+border: none;
+background: white;
+font-weight: bold;
+text-align: left;
+padding: 2px;
+overflow: hidden;
+}
+/* @doc="Selected column header." */
+table.tpTable th.tpHdrSelected {
+color: #3b84bc;
+background: white;
+}
+table.tpTable td {
+border: none;
+padding: 2px;
+overflow: hidden;
+}
+table.tpTable tr.tpSelected td {
+font-weight: normal;
+border: none;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+table.tpTable tr.tpSelected {
+color: black;
+border: none;
+background: #F3E799;
+background-image: none;
+}
+/* @doc="Style for rows when not using zebra styling." */
+.tpRow {
+color: black;
+background: white;
+}
+/* @doc="Style for odd-rows when using zebra styling." */
+.tpOdd {
+color: black;
+background: #F1F0E7;
+}
+/* @doc="Style for even-rows when using zebra styling." */
+.tpEven {
+color: black;
+background: white;
+}
+/* @doc="Cell containing a link." */
+.tpAction {
+font-size: 0.9em;
+}
+.tpAction a {
+white-space: nowrap;
+color: #3b84bc;
+}
+.tpAction a:hover {
+color: #98923a;
+}
+.tpAction a:link {
+color: #3b84bc;
+}
+.tpAction a:active {
+color: #3b84bc;
+}
+/* @doc="Table around navigator bar." */
+.tnbrTable {
+border: 1px solid #CBCBCB;
+background: #DCE7F1;
+padding: 1px;
+}
+/* @doc="Buttons within navigator bar." */
+.tnbrPagingButtons {
+border: 1px solid #CBCBCB;
+}
+/* combo boxes and dateText */
+.comboboxInput {
+border-top: 1px solid #cbcbcb;
+border-bottom: 1px solid #cbcbcb;
+border-left: 1px solid #cbcbcb;
+border-right: none;
+}
+.comboboxDropDown {
+border: 1px solid #cbcbcb;
+}
+.comboboxImgButton {
+border-top: 1px solid #cbcbcb;
+border-bottom: 1px solid #cbcbcb;
+border-left: none;
+border-right: 1px solid #cbcbcb;
+}
+.comboboxTextButton {
+border: 1px solid #cbcbcb;
+}
+/* override the default green/blue color with ISC blue */
+.modalGroup.modalGroupDialog {
+background: #333695;
+}
+.modalGroupTitle {
+border-bottom: 1px #333695 solid;
+}
+.modalGroupTitle td {
+color: #333695;
+}
+/* the effect of the following is to not show text in the top edge in modal dialog */
+.modalGroupIframe {
+background: #333695;
+}
+</style>
+<!-- Style: %CSP.UI.Portal.Application -->
+<style type="text/css">
+/* @doc="Combobox and dataCombo box drop-down style for this application." */
+.comboboxDropDown {
+padding: 4px;
+}
+.comboboxItem {
+font-size: 0.9em;
+}
+.comboboxItemSelected {
+font-size: 0.9em;
+}
+/* LocatorBar Links Style */
+DIV.locatorBarLinks {
+font-size: 0.8em;
+font-weight: bold;
+color: #333695;
+text-decoration: none;
+}
+DIV.locatorBarLinks A {
+color: #333695;
+text-decoration: none;
+padding-right: 1px;
+padding-left: 1px;
+}
+DIV.locatorBarLinks A:visited {
+color: #333695;
+}
+DIV.locatorBarLinks A:hover {
+color: #da4848;
+background: #FFFAE7;
+}
+.fieldSet {
+background: #F0F0F0;
+padding: 4px;
+}
+/* @doc="Default style for labels for disabled components." */
+.zenLabelDisabled {
+color: #979797;
+font-size: 12px;
+font-weight: normal;
+padding-right: 5px;
+}
+.helpText {
+color:#979797;
+font-size:12px;
+}
+.redText {
+color:#da4848;
+font-size:12px;
+font-weight: bold;
+}
+/* @doc="Item within listBox. Added font-size." */
+.listBoxItem {
+white-space: nowrap;
+width: 100%;
+color: black;
+/* ie does not handle transparent */
+border: 1px solid white;
+cursor: pointer;
+font-size:0.8em;
+}
+/* @doc="Selected item within listBox." */
+.listBoxItemSelected {
+white-space: nowrap;
+width: 100%;
+color: black;
+background: #E0E0E0;
+font-weight: bold;
+border: 1px dotted #202060;
+cursor: pointer;
+font-size:0.8em;
+}
+/* This is the style similar to intersystems.css's DetailCommand.*/
+.DetailCommand {
+font-size: 0.8em;
+font-weight: bold;
+border-top: 1px #979797 solid;
+border-bottom: 1px #979797 solid;
+background: rgb(53,107,141);
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+margin-bottom: 5px;
+width: 100%;
+}
+/* @doc="Default style for label/caption." */
+.caption {
+color: #404040;
+font-size: 12px;
+font-weight: bold;
+padding-right: 5px;
+}
+.normal {
+color: black;
+font-size: 12px;
+padding-right: 5px;
+}
+.disablednormal {
+color: #979797;
+font-size: 12px;
+padding-right: 5px;
+}
+.radioSetSpan {
+color: black;
+font-size: 12px;
+font-weight: normal;
+padding-left: 5px;
+}
+/* descriptive text for page title */
+#Text1 {
+color: #000000;
+font-size: 12pt;
+font-weight: bold;
+}
+/* Generic style for messages */
+.rednote {
+font-size: 11px;
+color: #da4848;
+text-align: left;
+font-weight: bold;
+}
+.greennote {
+font-size: 11px;
+color: #52b012;
+text-align: left;
+font-weight: bold;
+}
+</style>
+<!-- Style: %CSP.UI.Portal.Application -->
+<style type="text/css">
+/* @doc="label style for for Zen control 'button' in this application." */
+.button {
+margin-left: 2px;
+}
+/* @doc="error note style used in idRespond" */
+.errorNote {
+background: #FFFFFF;
+border: 1px solid #DA4848; /* red */
+border-radius: 4px;
+color: #DA4848;
+font-size: 12px;
+font-weight: bold;
+padding: 10px;
+text-align: left;
+display:inline-block;
+}
+/* @doc="regular note style used in idRespond" */
+.note {
+background: #FFFFFF;
+border: 1px solid #CBCBCB;
+border-radius: 4px;
+color: #000000;
+font-size: 12px;
+font-weight: bold;
+padding: 10px;
+text-align: left;
+display:inline-block;
+}
+.successNote {
+background: #FFFFFF;
+border: 1px solid #94BABA; /* green */
+border-radius: 4px;
+color: #52B012;
+font-size: 12px;
+font-weight: bold;
+padding: 10px;
+text-align: left;
+display:inline-block;
+}
+/* @doc="generic label style used for Zen control 'label' in this application" */
+.zenLabel {
+color: #000000;
+font-size: 12px;
+font-weight: 600;
+text-align: left;
+}
+/* @doc="generic hint style used for Zen control 'hint' in this application" */
+.zenHint {
+color:#717171;
+font-size:12px;
+}
+/* @doc="style for for links in forms in this application." */
+.smpLink a.link {
+text-decoration:underline;
+font-weight:normal;
+}
+</style>
+<!-- Style: %ZEN.Portal.standardPage -->
+<style type="text/css">
+body {
+background: #ffffff;
+font-family: Futura,Arial,sans-serif;
+}
+/* tool ribbon */
+.toolRibbon {
+height: 48px;
+background: white;
+float: left;
+vertical-align: middle;
+}
+.toolRibbonEnd {
+border: 1px solid #f0f0f0;
+width: calc(100% - 2px); /* the second value MUST be equal to the value of the left border width + right border width */
+}
+/* dark green and bold for ribbon title */
+.ribbonTitle {
+color:#00AFA9;
+font-family: Futura,Arial,sans-serif;
+font-size:36px;
+text-align:left;
+}
+.ribbonLabel {
+vertical-align: middle;
+font-weight: bold;
+font-size: 10pt;
+}
+.ribbonSortOption:hover,.ribbonSortOptionSelected:hover {
+color: darkred;
+}
+.ribbonSortOption {
+text-decoration: none;
+color: #5ba4dc;
+font-weight: normal;
+}
+.ribbonSortOptionSelected {
+text-decoration: none;
+color: #404040;
+background: #FFEEAA;
+font-weight: normal;
+}
+.viewIconBar {
+vertical-align: bottom;
+}
+.viewIcon,.viewIconSelected,.viewIconDis,.viewIconHover {
+vertical-align: bottom;
+border: 2px solid white;
+hight: 34px;
+width: 34px;
+}
+.viewIconSelected {
+border-radius: 2px;
+border: 3px solid #000000;
+}
+.viewIconHover {
+background: #BFE4E3;
+cursor:pointer;
+}
+/* Menu Bar */
+.csMenuBar {
+display:block;
+position:absolute;
+top:2px;
+right:1px;
+border:2px solid #333695;
+border-radius:4px;
+color:#333695;
+height:42px;
+width:83px;
+letter-spacing:0.75px;
+text-align:center;
+}
+.csMenuBar-active {
+background:#333695;
+}
+.csMenuBar-static {
+background:white;
+}
+.csMenuBarText-active {
+color:white;
+}
+.csMenuBarText-static {
+color:#333695;
+}
+.csMenuBarItem {
+background:white;
+cursor:pointer;
+color:#333695;
+font-size:12px;
+font-weight:bold;
+font-family:Futura,Arial,sans-serif;
+letter-spacing:0.75px;
+}
+.csMenuItem {
+font-family:Futura,Arial,sans-serif;
+}
+.csActiveMenuItem {
+background: #bfe4e3;
+color: #404040;
+}
+.shadow {
+background: none;
+}
+/* Search Box */
+#searchDiv {
+position: absolute;
+top: 117px;
+right: 30px;
+}
+.search-icon {
+width: 22px;
+vertical-align: bottom;
+cursor: pointer;
+}
+/* @doc="Override ZEN components' default style" */
+/* @doc="Text button in combobox." */
+.comboboxItem {
+font-size: 12px;
+}
+.comboboxTextButton {
+vertical-align: middle;
+font-size: 0.75em;
+border: 1px solid #cbcbcb;
+height: 100%;
+background: #404040;
+background-image: none;
+}
+.comboboxTextButton:hover {
+background: #404000;
+background-image: none;
+}
+/* @doc="Table displaying combobox dropdown contents." */
+/* comboBox */
+/* @doc="Headers within combobox dropdown list." */
+.comboboxItemSelected {
+width: 100%;
+color: #000000;
+background: #bfe4e3;
+background-image: none;
+border: 1px solid #cbcbcb;
+cursor: pointer;
+}
+/* @doc="Style for loading message within combobox dropdown." */
+.comboboxLoading {
+font-style: italic;
+color: #333695;
+}
+.comboboxTable th {
+white-space: nowrap;
+padding-right: 3px;
+padding-bottom: 2px;
+font-weight: bold;
+text-align: left;
+border-bottom: 1px solid #cbcbcb;
+background: #ffffff;
+background-image: none;
+}
+/* listBox */
+.listBox {
+font-size: 12px;
+color: #000000;
+background: white;
+border: 1px #cbcbcb solid;
+}
+/* @doc="Item within listBox." */
+.listBoxItem {
+white-space: nowrap;
+width: 100%;
+color: #000000;
+cursor: pointer;
+padding: 1px;
+}
+/* @doc="Mouse hover over item within combobox dropdown." */
+.comboboxItem a:hover {
+color: #000000;
+background: #f7f7f7;
+border: 1px solid #cbcbcb;
+}
+/* @doc="Selected item within listBox." */
+.listBoxItemSelected {
+white-space: nowrap;
+width: 100%;
+color: #000000;
+background: #bfe4e3;
+font-weight: bold;
+cursor: pointer;
+padding: 1px;
+}
+/* @doc="Selected item with focus within listBox." */
+.listBoxItemFocus {
+white-space: nowrap;
+width: 100%;
+font-weight: bold;
+color: #000000;
+background: #bfe4e3;
+background-image: none;
+border: 1px solid #cbcbcb;
+cursor: pointer;
+padding: 1px;
+}
+.listBoxItem:hover, .listBoxItemSelected:hover, .listBoxItemFocus:hover {
+color: #000000;
+background: #f7f7f7;
+}
+table.tpTable tr.tpSelected {
+background: #bfe4e3;
+}
+</style>
+<!-- Style: %CSP.Portal.Template -->
+<style type="text/css">
+#zenBody {
+margin:0px; padding: 0px;
+}
+.EditForm {
+background: #FFFFFF;
+border: 1px solid #979797;
+border-radius: 4px;
+-moz-border-radius: 4px;
+}
+.ErrorBox {
+background: #FFFFFF;
+border: 1px solid #979797;
+border-radius: 4px;
+-moz-border-radius: 4px;
+color: #DA4848;
+font-family: "courier new",sans-serif;
+margin: 20px;
+padding: 5px;
+}
+a.link {
+color: #333695;
+font-size: 0.8em;
+font-weight: bold;
+padding-left: 4px;
+text-decoration: none;
+}
+a.link:visited {
+color: #3b84bc;
+}
+a.link:hover {
+color: #98923a;
+}
+.iconHover {
+background: #FFEEAA;
+cursor: pointer;
+}
+</style>
+<!-- Style: %CSP.UI.Portal.Template -->
+<style type="text/css">
+/* light purple for Administration pages.
+See %CSP.UI.Portal.Utils for Operations
+See %CSP.UI.Template.List and %CSP.UI.Template.Property for Explorer pages
+.ribbonTitle {
+background: #D2CFDF;
+}*/
+/* additional style for table pane */
+table.tpTable th {
+border-right: 1px solid #F1F0E7;
+border-bottom: 1px solid #F1F0E7;
+}
+table.tpTable td {
+border-right: 1px solid #F1F0E7;
+border-top: 1px solid #F1F0E7;
+}
+</style>
+<!-- Style: %CSP.UI.Portal.About -->
+<style type="text/css">
+body {
+font-family: Futura,Arial,sans-serif;
+color: #000000;
+}
+table.InfoTable	{
+border: 1px solid #cbcbcb;
+border-radius: 4px 4px 0 0;
+font-size: 14px;
+margin-left: 20px;
+margin-right: 20px;
+-moz-border-radius: 4px;
+}
+table.InfoTable th.title {
+background: #F7F7F7;
+border-bottom: #CBCBCB solid 1px;
+color: #000000;
+font-weight: 600;
+font-size: 18px;
+text-align: left;
+padding: 6px 30px;
+}
+table.InfoTable td.data {
+border-bottom: #CBCBCB solid 1px;
+font-size: 14px;
+padding: 6px 30px;
+}
+table.InfoTable td.caption {
+font-weight: bold;
+border-bottom: #CBCBCB solid 1px;
+border-right: #CBCBCB solid 1px;
+font-size: 14px;
+padding: 6px 30px;
+}
+table.CopyRightTable {
+font-size: 14px;
+margin-left: 20px;
+margin-right: 20px;
+-moz-border-radius: 4px;
+}
+</style>
+<script type="text/javascript" src="zenutils.js"></script>
+<script type="text/javascript">var zenIsHTML5=false;</script>
+</head>
+<body id="zenBody">
+<xml id="zenWorkspace"></xml>
+<div id="zenMouseTrap" ></div>
+<div id="zenModalDiv" style="display: none;"></div>
+<div id="zenFloatingDiv" style="display: none;"></div>
+<div class="zendiv" id="zen1" zen="1"  ondatadrop=" zenPage.getComponent(1).dropHandler();">
+<table id="group_1" class="page" style="width:100%;height:100%;" border="0" cellspacing="0" cellpadding="0">
+<tr style="vertical-align:top;">
+<td id="zenLayoutTableCell_2"  style="position:relative; top:0px; left:0px">
+<div class="zendiv" id="zen2" zen="2"  ><div class="zendiv" id="title" zen="3"  ><div class="topLine"></div>
+<div class="portalTitle">	
+		<div class="portalLogoBox">
+		<img class="portalLogo" src='portal/InterSystems IRIS.png' alt='Ensemble'></img>
+		</div>
+		<div class="portalName">Management Portal
+		</div>
+		
+<div id="portalTitleMenuBox" class="portalTitleMenuBox">
+<img height="1px" width="32px" src="images/spacer.gif"/>
+<a class="portalTitleLink" title="Go to the Home page" href="#" onclick="return zenPage.goHome();">Home</a>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<a class="portalTitleLink" title="Display the About page" href="#" onclick="return zenPage.showAbout();">About</a>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<a class="portalTitleLink" title="Display help for this page" href="#" onclick="return zenPage.showHelp();">Help</a>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<a class="portalTitleLink" title="Contact InterSystems Worldwide Response Center" href="#" onclick="return zenPage.showContact();">Contact</a>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<a class="portalTitleLink" title="End this session" href="#" onclick="return zenPage.logout();">Logout</a>
+<img height="1px" width="32px" src="images/spacer.gif"/>
+</div>
+</div>
+
+ 
+	<div id="serverRow" class="portalTitleInfoBox">
+		<span class="portalTitleInfoLabel" nowrap="1">Server</span>
+		<span class="portalTitleInfoVal" nowrap>formation-iris&nbsp;</span>
+ 
+		<span class="portalTitleInfoLabel" nowrap="1">Namespace</span>
+<a class="portalServerLink" title="Switch namespace" href="#" onclick="zenPage.switchNamespace();return false;">%SYS</a>&nbsp;&nbsp;
+<span class="portalTitleInfoLabel" title="Name of user logged into this session" nowrap="1">
+	User
+	</span>
+	<span class="portalTitleInfoVal" nowrap="1">
+_SYSTEM
+&nbsp;</span>
+<span class="portalTitleInfoLabel" nowrap="1">Licensed To</span>
+		<span class="portalTitleInfoVal" nowrap>InterSystems IRIS Community&nbsp;</span>
+		<span class="portalTitleInfoLabel" nowrap="1" title="IRIS for UNIX (Ubuntu Server LTS for ARM64 Containers) 2023.3 (Build 254U) Wed Nov 8 2023 13:04:07 EST">Instance</span>
+		<span class="portalTitleInfoVal" nowrap>IRIS&nbsp;</span>
+		<span class="portalLostConnectivityWarn" id="lostConnectivityWarn" nowrap hidden></span>
+</div>
+<div id="locatorRow">
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a class="portalServerLink portalLocatorLink" href="/csp/sys/%25CSP.Portal.Home.zen">System</a>
+<span>&gt;</span>
+<a class="portalServerLink portalLocatorLink" href="%25CSP.UI.Portal.About.zen">About This System</a>
+<span id="pageTitleDisplay" hidden="true">&nbsp;-&nbsp;<span class="pageTitleText"><span id="pageTitleText">&nbsp;</span><span id="modifiedIndicator">&nbsp;</span></span></span>
+</div>
+</div>
+<div class="zendiv" id="zen4" zen="4" style="position:absolute; top:19px; right:40px;" ><div class="zendiv" id="mainMenu" zen="5" style="width:50px;" ><div class="csMenuBar" id="csMenuBar_5" >
+<div class="zendiv" id="zen6" zen="6"  ><div class="csMenuBarItem" id="csMenuBarItem_6" caption="Menu"  >
+<div class="zendiv" id="menuHolder" zen="7"  ><div class="contextMenu" id="contextMenu_7" >
+<div class="zendiv" id="zen12" zen="12"   onclick="return zenFireEvent('12','zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.Namespaces.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_12"    caption="Configure Namespaces"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/mgr/%25CSP.UI.Portal.Namespaces.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen13" zen="13"   onclick="return zenFireEvent('13','zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.Databases.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_13"    caption="Configure Databases"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/mgr/%25CSP.UI.Portal.Databases.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen14" zen="14"   onclick="return zenFireEvent('14','zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.MemoryStartup.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_14"    caption="Configure Memory"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/mgr/%25CSP.UI.Portal.MemoryStartup.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen15" zen="15"  ><div class="csMenuSeparator" id="csMenuSeparator_15"></div>
+</div>
+<div class="zendiv" id="zen16" zen="16"   onclick="return zenFireEvent('16','zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Applications.WebList.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_16"    caption="Manage Web Applications"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/sec/%25CSP.UI.Portal.Applications.WebList.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen17" zen="17"   onclick="return zenFireEvent('17','zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Users.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_17"    caption="Manage Users"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/sec/%25CSP.UI.Portal.Users.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen18" zen="18"   onclick="return zenFireEvent('18','zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Roles.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_18"    caption="Manage Roles"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/sec/%25CSP.UI.Portal.Roles.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen19" zen="19"   onclick="return zenFireEvent('19','zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Services.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_19"    caption="Manage Services"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/sec/%25CSP.UI.Portal.Services.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen20" zen="20"   onclick="return zenFireEvent('20','zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Resources.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_20"    caption="Manage Resources"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/sec/%25CSP.UI.Portal.Resources.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen21" zen="21"  ><div class="csMenuSeparator" id="csMenuSeparator_21"></div>
+</div>
+<div class="zendiv" id="zen22" zen="22"   onclick="return zenFireEvent('22','zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.SQL.Home.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_22"    caption="View SQL"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen23" zen="23"   onclick="return zenFireEvent('23','zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.ClassList.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_23"    caption="View Classes"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/exp/%25CSP.UI.Portal.ClassList.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen24" zen="24"   onclick="return zenFireEvent('24','zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.RoutineList.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_24"    caption="View Routines"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/exp/%25CSP.UI.Portal.RoutineList.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen25" zen="25"   onclick="return zenFireEvent('25','zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.GlobalList.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_25"    caption="View Globals"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/exp/%25CSP.UI.Portal.GlobalList.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen26" zen="26"  ><div class="csMenuSeparator" id="csMenuSeparator_26"></div>
+</div>
+<div class="zendiv" id="zen27" zen="27"   onclick="return zenFireEvent('27','zenPage.goMenu(\'\/csp\/sys\/op\/UtilDashboard.csp\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_27"    caption="View System Dashboard"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/op/UtilDashboard.csp&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen28" zen="28"   onclick="return zenFireEvent('28','zenPage.goMenu(\'\/csp\/sys\/op\/%25CSP.UI.Portal.Locks.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_28"    caption="Manage Locks"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/op/%25CSP.UI.Portal.Locks.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen29" zen="29"   onclick="return zenFireEvent('29','zenPage.goMenu(\'\/csp\/sys\/op\/%25CSP.UI.Portal.Processes.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_29"    caption="View Processes"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/op/%25CSP.UI.Portal.Processes.zen&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen30" zen="30"   onclick="return zenFireEvent('30','zenPage.goMenu(\'\/csp\/sys\/op\/UtilSysConsoleLog.csp\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_30"    caption="View Messages Log"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/op/UtilSysConsoleLog.csp&#39;);" >
+</div>
+</div>
+<div class="zendiv" id="zen31" zen="31"   onclick="return zenFireEvent('31','zenPage.goMenu(\'\/csp\/sys\/%25CSP.UI.Portal.BackgroundTaskList.zen\');','onclick',event);"><div class="csMenuItem" id="csMenuItem_31"    caption="View Background Tasks"      toggleMode="0" onselect="zenPage.goMenu(&#39;/csp/sys/%25CSP.UI.Portal.BackgroundTaskList.zen&#39;);" >
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr style="vertical-align:top;">
+<td id="zenLayoutTableCell_8"  >
+<div class="zendiv" id="toolRibbon" zen="8"  ><div class="toolRibbon">
+<table border="0" cellspacing="0" cellpadding="0" style="height:48px;width:100%;"><tr>
+<td width="25%" class="ribbonTitle">&nbsp;&nbsp;<nobr>About This System</nobr>&nbsp;&nbsp;</td>
+<td align="left" nowrap="1">
+<a id="command_btnBack" style="line-height:27px;" class="commandButton" href="#" onclick="history.back();return false;" title="Back"><nobr>Back</nobr></a>&nbsp;&nbsp;
+</td>
+<td style="width:40px;">&nbsp;</td>
+</tr></table>
+</div>
+</tr><tr><td colspan="50"><div class="toolRibbonEnd"></td></tr>
+</div>
+</td>
+</tr>
+<tr style="vertical-align:top;">
+<td id="zenLayoutTableCell_9"  style="vertical-align:top;">
+<div class="zendiv" id="zen9" zen="9" style="width:100%;" >
+<table id="group_9" class="group" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+<tr style="vertical-align:top;">
+<td id="zenLayoutTableCell_10"  style="padding:20px">
+<div class="zendiv" id="zen10" zen="10" style="width:100%;" >
+<table id="group_10" class="group" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+<tr style="vertical-align:top;">
+<td id="zenLayoutTableCell_11"  >
+<div class="zendiv" id="zen11" zen="11"  ><form method="post"><table><tr><td>
+<br><table class="InfoTable" border="0" cellspacing="0" cellpadding="0" >
+<tr><th class="title" height="30" colspan=2>System Overview
+</th></tr>
+<tr><td class="caption" title="This is the installed IRIS version.">Version</td><td class="data">IRIS for UNIX (Ubuntu Server LTS for ARM64 Containers) 2023.3 (Build 254U) Wed Nov 8 2023 13:04:07 EST</td></tr>
+<tr><td class="caption" title="Current active configuration file name.">Configuration</td><td class="data">/usr/irissys/iris.cpf</td></tr>
+<tr><td class="caption" title="Allocated Memory for Database Cache.">Database Cache (MB)</td><td class="data">3994</td></tr>
+<tr><td class="caption" title="Allocated Memory for Routine Cache.">Routine Cache (MB)</td><td class="data">397</td></tr>
+<tr><td class="caption" title="Current journal file name.">Journal file</td><td class="data">/usr/irissys/mgr/journal/20240214.001</td></tr>
+<tr><td class="caption" title="The superserver controls all IRIS services and answers all process requests.">Superserver Port</td><td class="data">1972</td></tr>
+<tr><td class="caption" title="Port the IRIS web server is running.">Web Server Port</td><td class="data">52773</td></tr>
+<tr><td class="caption" title="License server is used to allocate the IRIS license units authorized by the license key.">License Server Address/Port</td><td class="data">/</td></tr>
+<tr><td class="caption" title="This is the Customer Name in your license key.">Licensed to</td><td class="data">InterSystems IRIS Community</td></tr>
+<tr><td class="caption" title="Status of shared disk cluster configurations for certain systems.">Cluster support</td><td class="data">This system is not part of a cluster</td></tr>
+<tr><td class="caption" title="State of Mirroring on this system.">Mirroring</td><td class="data">This system is not a mirror member</td></tr>
+<tr><td class="caption" title="Last IRIS starting time.">Time System Started</td><td class="data">2024-02-09 12:16:18</td></tr>
+<tr><td class="caption" title="Encryption status or Encryption key id if activated.">Encryption Key Identifier</td><td class="data">Not available. Encryption is not activated.</td></tr>
+<tr><td class="caption" title="NLS Locale">NLS Locale</td><td class="data">ENUW</td></tr>
+<tr><td class="caption">Preferred language for this session</td><td class="data"><select name="PrefLang" id="PrefLang" onchange="return zenPage.callChangeLang(this.value);">
+<option value="" selected>-- Select a language --</option>
+<option value="ar" >ar</option>
+<option value="de" >German</option>
+<option value="en" selected>English</option>
+<option value="en-gb" >en-gb</option>
+<option value="en-us" >English (United States)</option>
+<option value="es" >Spanish</option>
+<option value="es-cl" >es-cl</option>
+<option value="fr" >French</option>
+<option value="it" >Italian</option>
+<option value="ja" >Japanese</option>
+<option value="ko" >Korean</option>
+<option value="nl" >Dutch</option>
+<option value="pt-br" >Portuguese (Brazil)</option>
+<option value="ru" >Russian</option>
+<option value="uk" >Ukrainian</option>
+<option value="zh-cn" >Chinese (PRC)</option>
+</select>
+</td></tr></table><tr><td>
+<table border="0" width="98%">
+	<tr>
+    <td align="right" valign="top">
+    <br><br>
+    <p style="font-size:12px;color:#717171;">
+    <a href="http://www.intersystems.com/index.html" target="_blank">
+    www.InterSystems.com</a>
+    <br><a href="https://www.intersystems.com/assets/InterSystems-Copyright-Notice.pdf" target="_blank"><span>Copyright </span></a>(c) 2024 by InterSystems Corporation.<br/>Cambridge, Massachusetts, U.S.A.  All rights reserved.<br/>Confidential property of InterSystems Corporation.<br>
+    <p>&nbsp;</p>
+    </td>
+  	</tr>
+	</table>
+</td></tr></table></form>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr style="height:99%;"><td ></td></tr>
+</table>
+</div>
+<script type="text/javascript" src="cspxmlhttp.js"></script>
+<script type="text/javascript" src="cspbroker.js"></script>
+<script type="text/javascript" src="zenCSLM.js"></script>
+<script type="text/javascript" src="ZEN_Component__core.js"></script>
+<script type="text/javascript" src="ZEN_Component_csMenuSeparator.js"></script>
+<script type="text/javascript" src="zenCSLM.js"></script>
+<script type="text/javascript" src="zenMenus.js"></script>
+<!-- JSINCLUDES -->
+<script type="text/javascript" src="zenMenusSMP.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+var zenAutoLogoutTime = 28815000;
+var zenAutoLogoutTimerID = null;
+var zenAutoLogoutWarnTime = zenAutoLogoutTime-45000;
+var zenAutoLogoutWarnTimerID = null;
+	
+
+zenAutoLogoutTimerID = self.setTimeout("zenAutoLogout()",zenAutoLogoutTime);
+function zenAutoLogout()
+{
+	var ok = true;
+	if (zenPage.onlogoutHandler) {
+		ok = zenPage.onlogoutHandler();
+	}
+	if (ok) {
+		top.document.location.reload();
+	}
+}
+		
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var _zenPageError = 'ZEN ERROR:\nzenPage object is missing or invalid for this page.';
+cspMultipleCall = true;
+function zenClassMethod(object,method,spec,rettype,args)
+{
+	if (zenAutoLogoutTimerID) {
+		self.clearTimeout(zenAutoLogoutTimerID);
+		zenAutoLogoutTimerID = self.setTimeout("zenAutoLogout()",zenAutoLogoutTime);
+	}
+	if (zenPage.onServerMethodCall) { zenPage.onServerMethodCall(method); }
+	var state = new zenSerialState();
+	var arglist = zenBuildArgumentList(state,spec,args);
+	if (zenDEBUGTraceEvents) { zenTRACE('Server Class Method',method,arglist);}
+	var header = state.getHeader();
+	var body = state.getBody();
+	var ns = '%SYS';
+	if (''!=rettype) {
+		var ret = cspHttpServerMethod("WUdm03eC5nR9Sdxp$U3M5Eolvu6sjlEQRjo$9fNRfwou6Wu3D5_x1IwO1u9$sTf63AI$OSUq5dyiqGuT_$q6Vw",object._serverClass,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		return zenConvertType(rettype,ret);
+	} else {
+		if (!zenSynchronousMode) {
+			cspCallHttpServerMethod("WUdm03eC5nR9Sdxp$U3M5Eolvu6sjlEQRjo$9fNRfwou6Wu3D5_x1IwO1u9$sTf63AI$OSUq5dyiqGuT_$q6Vw",object._serverClass,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		} else {
+			cspHttpServerMethod("WUdm03eC5nR9Sdxp$U3M5Eolvu6sjlEQRjo$9fNRfwou6Wu3D5_x1IwO1u9$sTf63AI$OSUq5dyiqGuT_$q6Vw",object._serverClass,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		}
+	}
+}
+function zenInstanceMethod(object,method,spec,rettype,args)
+{
+	if (zenAutoLogoutTimerID) {
+		self.clearTimeout(zenAutoLogoutTimerID);
+		zenAutoLogoutTimerID = self.setTimeout("zenAutoLogout()",zenAutoLogoutTime);
+	}
+	if (zenPage.onServerMethodCall) { zenPage.onServerMethodCall(method); }
+	var state = new zenSerialState();
+	state.addObject(object);
+	var arglist = zenBuildArgumentList(state,spec,args);
+	if (zenDEBUGTraceEvents) { zenTRACE('Server Instance Method',method,arglist);}
+	var header = state.getHeader();
+	var body = state.getBody();
+	var ns = '%SYS';
+	if (''!=rettype) {
+		var ret = cspHttpServerMethod("cLRFRjwBrt5ocjOG15MHTnvQqKubSXfJme68d$EZhV$KyBjQUeowM5WcOfQ4zNUBBlblj0Vo0d2_BdZLa6GuIzjVjiBKz39TzOGgYEyuToc",object.index,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		return zenConvertType(rettype,ret);
+	} else {
+		if (!zenSynchronousMode) {
+			cspCallHttpServerMethod("cLRFRjwBrt5ocjOG15MHTnvQqKubSXfJme68d$EZhV$KyBjQUeowM5WcOfQ4zNUBBlblj0Vo0d2_BdZLa6GuIzjVjiBKz39TzOGgYEyuToc",object.index,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		} else {
+			cspHttpServerMethod("cLRFRjwBrt5ocjOG15MHTnvQqKubSXfJme68d$EZhV$KyBjQUeowM5WcOfQ4zNUBBlblj0Vo0d2_BdZLa6GuIzjVjiBKz39TzOGgYEyuToc",object.index,method,rettype,zenSyncFlag,header,body,spec,arglist,ns,zenGetThreadId());
+		}
+	}
+}
+function zenLink(url,share)
+{
+	var parms = '';
+	if (share) {
+		parms = 'CSPSHARE=1&CSPCHD=001000010000gztrxoHfAZsMf7PcnEcq4CNPKFwaCH5kYrykwK';
+	}
+	var s = url.split('?');
+	var loc = s[0];
+	if (null!=s[1]||''!=parms) {
+		loc += '?' + parms + (null==s[1]?'':((''==parms)?'':'&') + s[1]);
+	}
+	return loc;
+}
+var _zenEmbeddedPage = false;
+var zenDecimalSeparator = '.';
+var zenNumericGroupSeparator = ',';
+var zenNumericGroupSize = 3;
+var _zenResource = new Object();
+_zenResource['zenDayNames'] = 'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday';
+_zenResource['zenDayShortNames'] = 'S,M,T,W,T,F,S';
+_zenResource['zenMonthNames'] = 'January,February,March,April,May,June,July,August,September,October,November,December';
+_zenResource['zenMonthShortNames'] = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec';
+var _zenTEXT = new Object();
+var _zenDOMAIN = '%Utility';
+self._zenTEXT['%Utility\/Are you sure you want to LOGOUT and discard changes?']='Are you sure you want to LOGOUT and discard changes?';
+self._zenTEXT['%Utility\/Changes have been made on this page.']='Changes have been made on this page.';
+self._zenTEXT['%Utility\/Do you wish to leave the page and discard the changes?']='Do you wish to leave the page and discard the changes?';
+self._zenTEXT['%Utility\/No Connection']='No Connection';
+self._zenTEXT['%Utility\/There are unsaved changes on this page.']='There are unsaved changes on this page.';
+self._zenTEXT['%Utility\/Are you sure you want to LOGOUT and discard changes?']='Are you sure you want to LOGOUT and discard changes?';
+self._zenTEXT['%Utility\/Changes have been made on this page.']='Changes have been made on this page.';
+self._zenTEXT['%Utility\/Do you wish to leave the page and discard the changes?']='Do you wish to leave the page and discard the changes?';
+self._zenTEXT['%Utility\/No Connection']='No Connection';
+self._zenTEXT['%Utility\/There are unsaved changes on this page.']='There are unsaved changes on this page.';
+self._zenTEXT['%Utility\/Unexpected error while attempting to save']='Unexpected error while attempting to save';
+self._zenTEXT['%Utility\/Unexpected error while attempting to save']='Unexpected error while attempting to save';
+
+self._zenClassIdx['standardPage'] = '_ZEN_Portal_standardPage';
+self._ZEN_Portal_standardPage = function(index,id) {
+	if (index>=0) {_ZEN_Portal_standardPage__init(this,index,id);}
+}
+
+self._ZEN_Portal_standardPage__init = function(o,index,id) {
+	('undefined' == typeof _ZEN_Component_page__init) ?zenMaster._ZEN_Component_page__init(o,index,id):_ZEN_Component_page__init(o,index,id);
+	o.StdTitle = 'IRIS - Standard Portal Page';
+	o.aboutPage = '_CSP.UI.Portal.About.zen';
+	o.contactPage = '\/csp\/sys\/%25CSP.UI.Portal.Contact.cls';
+	o.currSortMode = 'name';
+	o.currStep = '1';
+	o.currViewMode = 'columns';
+	o.enableAutoRefresh = false;
+	o.homePage = '\/csp\/sys\/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS';
+	o.limitPopups = false;
+	o.pageModified = false;
+	o.searchKey = '';
+	o.useSoftModals = true;
+}
+function _ZEN_Portal_standardPage_serialize(set,s)
+{
+	var o = this;s[0]='1567531536';s[1]=o.index;s[2]=o.id;s[3]=o.name;s[4]=set.addObject(o.parent,'parent');s[5]=set.addObject(o.composite,'composite');s[6]=o.SVGClassList;s[7]=o.StdTitle;s[8]=o.UserSVGPackageList;s[9]=o.aboutPage;s[10]=o.align;s[11]=o.aux;s[12]=o.backgroundTimerInterval;s[13]=o.cellAlign;s[14]=o.cellSize;s[15]=o.cellStyle;s[16]=o.cellVAlign;s[17]=set.serializeList(o,o.children,true,'children');s[18]=o.contactPage;s[19]=o.containerStyle;s[20]=o.cssLevel;s[21]=o.currSortMode;s[22]=o.currStep;s[23]=o.currViewMode;s[24]=(o.designMode?1:0);s[25]=(o.disabled?1:0);s[26]=(o.dragAndDrop?1:0);s[27]=(o.dragEnabled?1:0);s[28]=(o.dropEnabled?1:0);s[29]=(o.dynamic?1:0);s[30]=(o.enableAutoRefresh?1:0);s[31]=o.enclosingClass;s[32]=o.enclosingStyle;s[33]=o.error;s[34]=o.groupClass;s[35]=o.groupStyle;s[36]=o.height;s[37]=(o.hidden?1:0);s[38]=o.hint;s[39]=o.hintClass;s[40]=o.hintStyle;s[41]=o.homePage;s[42]=(o.inlineSVG?1:0);s[43]=(o.isPopup?1:0);s[44]=(o.isSoftModal?1:0);s[45]=o.label;s[46]=o.labelClass;s[47]=o.labelDisabledClass;s[48]=o.labelPosition;s[49]=o.labelStyle;s[50]=o.lastModalIndex;s[51]=o.layout;s[52]=(o.limitPopups?1:0);s[53]=o.nextIndex;s[54]=o.onafterdrag;s[55]=o.onbeforedrag;s[56]=o.onclick;s[57]=o.ondrag;s[58]=o.ondrop;s[59]=o.onhide;s[60]=o.onoverlay;s[61]=o.onrefresh;s[62]=o.onshow;s[63]=o.onupdate;s[64]=o.overlayMode;s[65]=(o.pageModified?1:0);s[66]=o.popupParent;s[67]=o.renderFlag;s[68]=o.searchKey;s[69]=(o.showLabel?1:0);s[70]=o.slice;s[71]=o.title;s[72]=o.tuple;s[73]=(o.useSVG?1:0);s[74]=(o.useSoftModals?1:0);s[75]=o.valign;s[76]=(o.visible?1:0);s[77]=o.width;s[78]=(o.zenPersistentPopup?1:0);
+}
+function _ZEN_Portal_standardPage_getSettings(s)
+{
+	s['name'] = 'string';
+	s['StdTitle'] = 'string';
+	s['aboutPage'] = 'string';
+	s['contactPage'] = 'string';
+	s['currSortMode'] = 'string';
+	s['currStep'] = 'integer';
+	s['currViewMode'] = 'string';
+	s['enableAutoRefresh'] = 'boolean';
+	s['homePage'] = 'string';
+	s['limitPopups'] = 'boolean';
+	s['pageModified'] = 'boolean';
+	s['searchKey'] = 'string';
+	this.invokeSuper('getSettings',arguments);
+}
+
+self._ZEN_Portal_standardPage_changePassword = function() {
+	zenLaunchPopupWindow(zenLink('/csp/sys/_CSP.UI.Portal.Dialog.ChangePassword.cls'),'changePassword','status,scrollbars,resizable=yes,width=480,height=500,location=no');
+}
+
+self._ZEN_Portal_standardPage_getPageTitle = function() {
+	return "";
+}
+
+self._ZEN_Portal_standardPage_getTitleAreaHeight = function() {
+	var hgt = 0;
+	try {
+		var titleHgt = 0;
+		var ribbonHgt = 0;
+		var titleDiv = zen('title').getEnclosingDiv();
+		if (titleDiv) {
+			titleHgt = titleDiv.offsetHeight;
+		}
+		var ribbonDiv = zen('toolRibbon').getEnclosingDiv();
+		if (ribbonDiv && ribbonDiv.children && ribbonDiv.children[0]) {
+			ribbonHgt = ribbonDiv.children[0].offsetHeight;
+		}
+		
+		hgt = titleHgt + ribbonHgt;
+	}
+	catch(ex) {
+		zenExceptionHandler(ex,arguments,'Error in getTitleAreaHeight.');
+	}
+	
+	return hgt;
+}
+
+self._ZEN_Portal_standardPage_goHome = function() {
+	zenPage.gotoPage(this.homePage);
+	return false;
+}
+
+self._ZEN_Portal_standardPage_goMenu = function(link) {
+	zenPage.gotoPage(link);
+	return false;
+}
+
+self._ZEN_Portal_standardPage_gotoNamespace = function(url) {
+	zenPage.gotoPage(url);
+}
+
+self._ZEN_Portal_standardPage_logout = function() {
+	var ok = true;
+	if (this.pageModified) {
+		var msg = $$$Text("There are unsaved changes on this page.","%Utility") + "\n\n"
+		+ $$$Text("Are you sure you want to LOGOUT and discard changes?","%Utility");
+		var ok = confirm(msg);
+		if (ok == true) {
+			this.pageModified = false;		
+		}
+	}
+	if (ok == true) {
+		document.location = this.DoLogout();
+	}
+	return false;
+}
+
+self._ZEN_Portal_standardPage_navigate = function(url) {
+	zenPage.gotoPage(url);
+}
+
+self._ZEN_Portal_standardPage_onPopupAction = function(popupName,action,value) {
+	if (action != "ok") {
+		return false;
+	}	
+	switch(popupName) {
+	case 'switchNamespace':
+		var url = zenPage.GetNewURL(value);
+		// do not use this.gotoPage(url) because zenLink will not honor the latest $NAMESPACE you selected, i.e. you may end up with multiple $NAMESPACE on the URL.
+		try {
+			if (window.location && window.location.assign) window.location.assign(url);
+			else self.document.location = url;
+		}
+		catch (e) {
+		}
+		break;
+	}
+}
+
+self._ZEN_Portal_standardPage_onServerMethodError = function(err,errObject) {
+	var doAlert = true;
+	if (errObject) {
+		var code = errObject.code;
+		var serverCode = errObject.serverCode;
+		if ((code == 401) && ((serverCode == 864) || (serverCode == 5918))) {
+			self.document.location.reload();
+			doAlert = false;
+		}
+		else if ((zenPage.limitPopups)&&(code<401)) { // check to see if this was refresh timer related
+			var refreshRate = self.document.getElementById('refreshRate').value;
+			if (refreshRate) { //page has defined refresh rate
+				if ((document.getElementById("refreshOn"))&&(document.getElementById("refreshOn").checked)) {
+					zenPage.setConnectivityStatusMsg(err);
+					window.setTimeout('zenPage.setConnectivityStatusMsg("Re-trying");',parseInt(refreshRate*1000));
+					window.setTimeout('zenPage.testConnectivity();',parseInt(refreshRate*1000));
+					doAlert = false;
+				}
+			}
+		}
+	}
+	if (doAlert) {
+		alert(err);
+	}
+	return true;
+}
+
+self._ZEN_Portal_standardPage_onloadHandler = function() {
+	// overwrite the menu style defined by JS
+	var mainMenu=document.getElementById("mainMenu");
+	if(mainMenu!=null) {
+		mainMenu.parentElement.removeAttribute("style");
+	}
+	
+	var menuBar=document.getElementsByClassName("csMenuBar");
+	if(menuBar.length>0) {
+		menuBar[0].removeAttribute("style");
+	}
+	var menuBarItem=document.getElementsByClassName("csMenuBarItem");
+	if(menuBarItem.length>0) {
+		menuBarItem[0].removeAttribute("style");
+		// ZHJ038: Context Menu Shown Unintentionally
+		menuBarItem[0].removeAttribute("onmouseover");
+		menuBarItem[0].removeAttribute("onmouseout");
+		var children=menuBarItem[0].children;
+		if(children.length>0){
+			for(var i=0; i<children.length; i++) {
+				children[i].removeAttribute("style");
+				if(i===2) {
+					var menuBarText = children[i];
+					menuBarText.setAttribute("style", "margin-top:12px;");
+				}
+			}
+		}
+	}	
+
+	// Set the page title in the locator bar (breadcrumbs) if there is one
+	var title = zenPage.getPageTitle();
+	this.setPageTitle(title); 	
+	return 1
+}
+
+self._ZEN_Portal_standardPage_onlogoutHandler = function() {
+	// Ensure that auto-logout is not blocked by onunloadHandler checking for unsaved changes 
+	this.pageModified = false;
+	return true;
+}
+
+self._ZEN_Portal_standardPage_onunloadHandler = function() {
+	if (this.pageModified) {
+		return $$$Text('Changes have been made on this page.','%Utility')+'\n'+$$$Text('Do you wish to leave the page and discard the changes?','%Utility');
+	}
+	return true;
+}
+
+self._ZEN_Portal_standardPage_searchBlur = function(evt) {
+}
+
+self._ZEN_Portal_standardPage_searchBoxHandler = function(searchKey) {
+	this.searchKey = searchKey;
+}
+
+self._ZEN_Portal_standardPage_searchFocus = function(evt) {
+}
+
+self._ZEN_Portal_standardPage_searchKeyDown = function(evt) {
+	//work-around for ie
+	evt = evt ? evt : event;
+	return true;
+}
+
+self._ZEN_Portal_standardPage_searchKeyPress = function(evt) {
+	//work-around for ie
+	var ctrl = self.document.getElementById('searchBox');
+	evt = evt ? evt : event;
+	if (ctrl && evt.keyCode == zenENTER) {
+		zenPage.searchBoxHandler(ctrl.value);
+	}
+}
+
+self._ZEN_Portal_standardPage_setConnectivityStatusMsg = function(msg) {
+	var span = document.getElementById('lostConnectivityWarn');
+	if (span) {
+		if (msg!='') {
+			span.title = msg;
+			span.innerHTML = $$$Text("No Connection");
+			span.hidden = false;
+		} else {
+			span.title='';
+			span.innerHTML='';
+			span.hidden = true;
+		}
+	}
+}
+
+self._ZEN_Portal_standardPage_setModified = function(flag) {
+	if (this.pageModified != flag) {
+		this.pageModified = flag;
+		var span = self.document.getElementById('modifiedIndicator');
+		if (span) {
+			span.innerHTML = this.pageModified ? '*' : '&nbsp;';
+		}
+	}
+}
+
+self._ZEN_Portal_standardPage_setPageTitle = function(name) {
+	var txt = self.document.getElementById('pageTitleText');
+	if (txt) {
+		txt.innerHTML = (name!='') ? (zenEscapeHTML('('+name+')')) : '&nbsp;';
+	}
+	var span = self.document.getElementById('pageTitleDisplay');
+	if (span) {
+		span.hidden = (name == '');
+	}
+}
+
+self._ZEN_Portal_standardPage_setSortMode = function(mode) {
+	if (mode != this.currSortMode) {
+		var el = self.document.getElementById('sort_'+this.currSortMode);
+		if (el) {
+			el.className = 'ribbonSortOption';
+		}
+		this.currSortMode = mode;
+		var el = self.document.getElementById('sort_'+this.currSortMode);
+		if (el) {
+			el.className = 'ribbonSortOptionSelected';
+		}
+		this.setSortModeHandler(mode);
+	}
+}
+
+self._ZEN_Portal_standardPage_setSortModeHandler = function(mode) {
+}
+
+self._ZEN_Portal_standardPage_setViewMode = function(mode) {
+	if (mode != this.currViewMode) {
+		// update icon
+		var el = self.document.getElementById('view_'+this.currViewMode);
+		if (el) {
+			el.className = 'viewIcon';
+		}
+		var oldmode = this.currViewMode;
+		this.currViewMode = mode;
+		var el = self.document.getElementById('view_'+this.currViewMode);
+		if (el) {
+			el.className = 'viewIconSelected';
+			el._oldClass = 'viewIconSelected';
+		}
+		
+		this.setViewModeHandler(mode,oldmode);
+	}
+}
+
+self._ZEN_Portal_standardPage_setViewModeHandler = function(mode,oldmode) {
+	// update finder
+	var finder = zen('finder');
+	if (finder) {
+		finder.setViewType(this.currViewMode);
+	}
+}
+
+self._ZEN_Portal_standardPage_showAbout = function() {
+	zenPage.gotoPage(this.aboutPage);
+	return false;
+}
+
+self._ZEN_Portal_standardPage_showContact = function() {
+	zenPage.gotoPage(this.contactPage);
+	return false;
+}
+
+self._ZEN_Portal_standardPage_showHelp = function() {
+	var url;
+	if (this.HelpAddress) {
+		url = this.GetDocURL(this.HelpAddress);
+	} else {
+		url = zenLink("/csp/docbook/DocBook.UI.PortalHelpPage.cls?KEY=Home");
+	}
+	var wid = self.screen.width;
+	var hgt = self.screen.height;
+	if (parseInt(navigator.appVersion)>3) {
+		if (navigator.appName == "Netscape") {
+			wid = window.innerWidth;
+			hgt = window.innerHeight;
+		}
+		if (navigator.appName.indexOf("Microsoft") != -1) {
+	 		wid = document.body.offsetWidth;
+	 		hgt = document.body.offsetHeight;
+		}
+	}
+	wid = wid * 0.8;
+	hgt = hgt * 0.8;
+	var top = self.screen.height * 0.1;
+	var left = self.screen.width * 0.1;
+	//YSD2331 zenLaunchPopupWindow(url,'Help Window','left='+left+',top='+top+',width='+wid+',height='+hgt+',status,scrollbars,resizable,location=1,toolbar=1,menubar=1,modal=no');
+	var features = 'left='+left+',top='+top+',width='+wid+',height='+hgt+',status,scrollbars,resizable,location=1,toolbar=1,menubar=1';
+	var popup = window.open(url,'HelpWindow',features);
+	popup.focus();
+	return false;
+}
+
+self._ZEN_Portal_standardPage_switchNamespace = function() {
+	zenLaunchPopupWindow(zenLink('%ZEN.Dialog.namespaceSelect.cls'),'switchNamespace','status,scrollbars,resizable=yes,width=500,height=500,location=no');
+}
+
+self._ZEN_Portal_standardPage_testConnectivity = function() {
+	var img = new Image();
+	img.onload = function () {
+		self.document.location.reload();
+	};
+	img.onerror = function (e) {
+		zenPage.onServerMethodError("Server not responding", {code:0})
+	};
+	img.src = document.location.origin+'/csp/broker/images/cut.png?rnd='+Math.random();
+}
+
+self._ZEN_Portal_standardPage_DoLogout = function() {
+	return zenClassMethod(this,'DoLogout','','VARCHAR',arguments);
+}
+
+self._ZEN_Portal_standardPage_GetCSPURL = function(link) {
+	return zenClassMethod(this,'GetCSPURL','L','VARCHAR',arguments);
+}
+
+self._ZEN_Portal_standardPage_GetDocURL = function(pHelpAddress) {
+	return zenClassMethod(this,'GetDocURL','L','VARCHAR',arguments);
+}
+
+self._ZEN_Portal_standardPage_GetNewURL = function(pNS,pPage) {
+	return zenClassMethod(this,'GetNewURL','L,L','VARCHAR',arguments);
+}
+
+self._ZEN_Portal_standardPage_JavaInstalled = function() {
+	return zenClassMethod(this,'JavaInstalled','','BOOLEAN',arguments);
+}
+
+self._ZEN_Portal_standardPage_LoadZenComponent = function(pNamespace,pName,pClassName,pCSSLevel) {
+	return zenClassMethod(this,'LoadZenComponent','L,L,L,L','BOOLEAN',arguments);
+}
+
+self._ZEN_Portal_standardPage_MonitorBackgroundTask = function(pTaskID) {
+	zenClassMethod(this,'MonitorBackgroundTask','L','',arguments);
+}
+
+self._ZEN_Portal_standardPage_ReallyRefreshContents = function() {
+	zenInstanceMethod(this,'ReallyRefreshContents','','',arguments);
+}
+self._ZEN_Portal_standardPage__Loader = function() {
+	zenLoadClass('_ZEN_Component_page');
+	_ZEN_Portal_standardPage.prototype = zenCreate('_ZEN_Component_page',-1);
+	var p = _ZEN_Portal_standardPage.prototype;
+	if (null==p) {return;}
+	p.constructor = _ZEN_Portal_standardPage;
+	p.superClass = ('undefined' == typeof _ZEN_Component_page) ? zenMaster._ZEN_Component_page.prototype:_ZEN_Component_page.prototype;
+	p.__ZENcomponent = true;
+	p._serverClass = '%ZEN.Portal.standardPage';
+	p._type = 'standardPage';
+	p.serialize = _ZEN_Portal_standardPage_serialize;
+	p.getSettings = _ZEN_Portal_standardPage_getSettings;
+	p.DoLogout = _ZEN_Portal_standardPage_DoLogout;
+	p.GetCSPURL = _ZEN_Portal_standardPage_GetCSPURL;
+	p.GetDocURL = _ZEN_Portal_standardPage_GetDocURL;
+	p.GetNewURL = _ZEN_Portal_standardPage_GetNewURL;
+	p.JavaInstalled = _ZEN_Portal_standardPage_JavaInstalled;
+	p.LoadZenComponent = _ZEN_Portal_standardPage_LoadZenComponent;
+	p.MonitorBackgroundTask = _ZEN_Portal_standardPage_MonitorBackgroundTask;
+	p.ReallyRefreshContents = _ZEN_Portal_standardPage_ReallyRefreshContents;
+	p.changePassword = _ZEN_Portal_standardPage_changePassword;
+	p.getPageTitle = _ZEN_Portal_standardPage_getPageTitle;
+	p.getTitleAreaHeight = _ZEN_Portal_standardPage_getTitleAreaHeight;
+	p.goHome = _ZEN_Portal_standardPage_goHome;
+	p.goMenu = _ZEN_Portal_standardPage_goMenu;
+	p.gotoNamespace = _ZEN_Portal_standardPage_gotoNamespace;
+	p.logout = _ZEN_Portal_standardPage_logout;
+	p.navigate = _ZEN_Portal_standardPage_navigate;
+	p.onPopupAction = _ZEN_Portal_standardPage_onPopupAction;
+	p.onServerMethodError = _ZEN_Portal_standardPage_onServerMethodError;
+	p.onloadHandler = _ZEN_Portal_standardPage_onloadHandler;
+	p.onlogoutHandler = _ZEN_Portal_standardPage_onlogoutHandler;
+	p.onunloadHandler = _ZEN_Portal_standardPage_onunloadHandler;
+	p.searchBlur = _ZEN_Portal_standardPage_searchBlur;
+	p.searchBoxHandler = _ZEN_Portal_standardPage_searchBoxHandler;
+	p.searchFocus = _ZEN_Portal_standardPage_searchFocus;
+	p.searchKeyDown = _ZEN_Portal_standardPage_searchKeyDown;
+	p.searchKeyPress = _ZEN_Portal_standardPage_searchKeyPress;
+	p.setConnectivityStatusMsg = _ZEN_Portal_standardPage_setConnectivityStatusMsg;
+	p.setModified = _ZEN_Portal_standardPage_setModified;
+	p.setPageTitle = _ZEN_Portal_standardPage_setPageTitle;
+	p.setSortMode = _ZEN_Portal_standardPage_setSortMode;
+	p.setSortModeHandler = _ZEN_Portal_standardPage_setSortModeHandler;
+	p.setViewMode = _ZEN_Portal_standardPage_setViewMode;
+	p.setViewModeHandler = _ZEN_Portal_standardPage_setViewModeHandler;
+	p.showAbout = _ZEN_Portal_standardPage_showAbout;
+	p.showContact = _ZEN_Portal_standardPage_showContact;
+	p.showHelp = _ZEN_Portal_standardPage_showHelp;
+	p.switchNamespace = _ZEN_Portal_standardPage_switchNamespace;
+	p.testConnectivity = _ZEN_Portal_standardPage_testConnectivity;
+}
+
+self._zenClassIdx['Template'] = '_CSP_Portal_Template';
+self._CSP_Portal_Template = function(index,id) {
+	if (index>=0) {_CSP_Portal_Template__init(this,index,id);}
+}
+
+self._CSP_Portal_Template__init = function(o,index,id) {
+	('undefined' == typeof _ZEN_Portal_standardPage__init) ?zenMaster._ZEN_Portal_standardPage__init(o,index,id):_ZEN_Portal_standardPage__init(o,index,id);
+	o.HelpAddress = '';
+	o.ISREADONLY = false;
+	o.LocatorHeader = '';
+	o.ParentURL = '';
+	o.StdTitle = 'Template for Management Portal';
+	o.aboutPage = '_CSP.UI.Portal.About.zen';
+	o.contactPage = '\/csp\/sys\/%25CSP.UI.Portal.Contact.cls';
+	o.enableAutoRefresh = false;
+	o.home = '';
+	o.homePage = '\/csp\/sys\/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS';
+	o.lblTitle = 'Template for Management Portal';
+	o.limitPopups = false;
+	o.useSoftModals = true;
+}
+function _CSP_Portal_Template_serialize(set,s)
+{
+	var o = this;s[0]='2266709172';s[1]=o.index;s[2]=o.id;s[3]=o.name;s[4]=set.addObject(o.parent,'parent');s[5]=set.addObject(o.composite,'composite');s[6]=o.HelpAddress;s[7]=(o.ISREADONLY?1:0);s[8]=o.LocatorHeader;s[9]=o.ParentURL;s[10]=o.SVGClassList;s[11]=o.StdTitle;s[12]=o.UserSVGPackageList;s[13]=o.aboutPage;s[14]=o.align;s[15]=o.aux;s[16]=o.backgroundTimerInterval;s[17]=o.cellAlign;s[18]=o.cellSize;s[19]=o.cellStyle;s[20]=o.cellVAlign;s[21]=set.serializeList(o,o.children,true,'children');s[22]=o.contactPage;s[23]=o.containerStyle;s[24]=o.cssLevel;s[25]=o.currSortMode;s[26]=o.currStep;s[27]=o.currViewMode;s[28]=(o.designMode?1:0);s[29]=(o.disabled?1:0);s[30]=(o.dragAndDrop?1:0);s[31]=(o.dragEnabled?1:0);s[32]=(o.dropEnabled?1:0);s[33]=(o.dynamic?1:0);s[34]=(o.enableAutoRefresh?1:0);s[35]=o.enclosingClass;s[36]=o.enclosingStyle;s[37]=o.error;s[38]=o.groupClass;s[39]=o.groupStyle;s[40]=o.height;s[41]=(o.hidden?1:0);s[42]=o.hint;s[43]=o.hintClass;s[44]=o.hintStyle;s[45]=o.home;s[46]=o.homePage;s[47]=(o.inlineSVG?1:0);s[48]=(o.isPopup?1:0);s[49]=(o.isSoftModal?1:0);s[50]=o.label;s[51]=o.labelClass;s[52]=o.labelDisabledClass;s[53]=o.labelPosition;s[54]=o.labelStyle;s[55]=o.lastModalIndex;s[56]=o.layout;s[57]=o.lblTitle;s[58]=(o.limitPopups?1:0);s[59]=o.nextIndex;s[60]=o.onafterdrag;s[61]=o.onbeforedrag;s[62]=o.onclick;s[63]=o.ondrag;s[64]=o.ondrop;s[65]=o.onhide;s[66]=o.onoverlay;s[67]=o.onrefresh;s[68]=o.onshow;s[69]=o.onupdate;s[70]=o.overlayMode;s[71]=(o.pageModified?1:0);s[72]=o.popupParent;s[73]=o.renderFlag;s[74]=o.searchKey;s[75]=(o.showLabel?1:0);s[76]=o.slice;s[77]=o.title;s[78]=o.tuple;s[79]=(o.useSVG?1:0);s[80]=(o.useSoftModals?1:0);s[81]=o.valign;s[82]=(o.visible?1:0);s[83]=o.width;s[84]=(o.zenPersistentPopup?1:0);
+}
+function _CSP_Portal_Template_getSettings(s)
+{
+	s['name'] = 'string';
+	s['HelpAddress'] = 'string';
+	s['ISREADONLY'] = 'string';
+	s['LocatorHeader'] = 'caption';
+	s['ParentURL'] = 'string';
+	s['StdTitle'] = 'string';
+	s['enableAutoRefresh'] = 'boolean';
+	s['home'] = 'string';
+	s['lblTitle'] = 'string';
+	this.invokeSuper('getSettings',arguments);
+}
+
+self._CSP_Portal_Template_disableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButtonDisabled";
+	button.style.cursor = "default";
+	// if we haven't set anything into OnclickArray, it needs to be initialized as an Array
+	if (this.OnclickArray == null) {
+		this.OnclickArray = new Array();
+	}
+	// if we've already stored the button's value, return
+	if (typeof(this.OnclickArray[buttonName]) != 'undefined') {
+		button['onclick'] = null;		// DTB932 - Clear onclick for the current button before exiting here
+		return;
+	}
+	// save the current onclick contents into the onclick array
+	var onclickContents = button['onclick'];
+	if (typeof(onclickContents) != "function") {
+		this.OnclickArray[buttonName] = new Function(onclickContents);
+	} else {
+		this.OnclickArray[buttonName] = onclickContents;
+	}
+	button['onclick'] = null;
+}
+
+self._CSP_Portal_Template_enableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButton";
+	button.style.cursor = "pointer";
+	// if the onclick array is initialized and has a value for this button, add it
+	if ((this.OnclickArray != null) && (this.OnclickArray[buttonName] != undefined)) {
+		button['onclick'] = this.OnclickArray[buttonName];
+	}
+}
+
+self._CSP_Portal_Template_hideCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "none";
+}
+
+self._CSP_Portal_Template_showCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "";
+}
+
+self._CSP_Portal_Template_showDocumentation = function(topic,anchor,url) {
+		if (null==url) {
+			url = "#(helpClass)#";
+		}
+		
+		var wid = self.screen.width;
+		var hgt = self.screen.height;
+		if (parseInt(navigator.appVersion)>3) {
+ 			if (navigator.appName == "Netscape") {
+ 				wid = window.innerWidth;
+ 				hgt = window.innerHeight;
+ 			}
+ 			if (navigator.appName.indexOf("Microsoft") != -1) {
+  		 		wid = document.body.offsetWidth;
+ 		 		hgt = document.body.offsetHeight;
+ 			}
+		}
+		wid = wid * 0.8;
+		hgt = hgt * 0.8;
+		var top = self.screen.height * 0.1;
+		var left = self.screen.width * 0.1;
+		
+		if (topic && ('' != topic)) {
+			if (url.indexOf("?") == -1) {
+				url += '?';
+			} else {
+				url += '&';	
+			}
+			url += 'KEY=' + encodeURIComponent(topic);
+		}
+		if (anchor && ('' != anchor)) {
+			url += '#' + encodeURIComponent(anchor);
+		}
+		win = window.open(url,'docbook','left='+left+',top='+top+',width='+wid+',height='+hgt+',status,scrollbars,resizable,location=1,toolbar=1,menubar=1');
+		win.focus();
+}
+
+self._CSP_Portal_Template_CheckAllBlanks = function(string) {
+	return zenClassMethod(this,'CheckAllBlanks','L','BOOLEAN',arguments);
+}
+
+self._CSP_Portal_Template_DoLogout = function() {
+	return zenClassMethod(this,'DoLogout','','VARCHAR',arguments);
+}
+
+self._CSP_Portal_Template_GetCSPURL = function(link) {
+	return zenClassMethod(this,'GetCSPURL','L','VARCHAR',arguments);
+}
+
+self._CSP_Portal_Template_GetDocURL = function(pHelpAddress) {
+	return zenClassMethod(this,'GetDocURL','L','VARCHAR',arguments);
+}
+
+self._CSP_Portal_Template_GetHomePage = function() {
+	return zenClassMethod(this,'GetHomePage','','VARCHAR',arguments);
+}
+
+self._CSP_Portal_Template_GetNewURL = function(pNS,pPage) {
+	return zenClassMethod(this,'GetNewURL','L,L','VARCHAR',arguments);
+}
+
+self._CSP_Portal_Template_JavaInstalled = function() {
+	return zenClassMethod(this,'JavaInstalled','','BOOLEAN',arguments);
+}
+
+self._CSP_Portal_Template_LoadZenComponent = function(pNamespace,pName,pClassName,pCSSLevel) {
+	return zenClassMethod(this,'LoadZenComponent','L,L,L,L','BOOLEAN',arguments);
+}
+
+self._CSP_Portal_Template_MonitorBackgroundTask = function(pTaskID) {
+	zenClassMethod(this,'MonitorBackgroundTask','L','',arguments);
+}
+
+self._CSP_Portal_Template_ReallyRefreshContents = function() {
+	zenInstanceMethod(this,'ReallyRefreshContents','','',arguments);
+}
+self._CSP_Portal_Template__Loader = function() {
+	zenLoadClass('_ZEN_Portal_standardPage');
+	_CSP_Portal_Template.prototype = zenCreate('_ZEN_Portal_standardPage',-1);
+	var p = _CSP_Portal_Template.prototype;
+	if (null==p) {return;}
+	p.constructor = _CSP_Portal_Template;
+	p.superClass = ('undefined' == typeof _ZEN_Portal_standardPage) ? zenMaster._ZEN_Portal_standardPage.prototype:_ZEN_Portal_standardPage.prototype;
+	p.__ZENcomponent = true;
+	p._serverClass = '%CSP.Portal.Template';
+	p._type = 'Template';
+	p.serialize = _CSP_Portal_Template_serialize;
+	p.getSettings = _CSP_Portal_Template_getSettings;
+	p.CheckAllBlanks = _CSP_Portal_Template_CheckAllBlanks;
+	p.DoLogout = _CSP_Portal_Template_DoLogout;
+	p.GetCSPURL = _CSP_Portal_Template_GetCSPURL;
+	p.GetDocURL = _CSP_Portal_Template_GetDocURL;
+	p.GetHomePage = _CSP_Portal_Template_GetHomePage;
+	p.GetNewURL = _CSP_Portal_Template_GetNewURL;
+	p.JavaInstalled = _CSP_Portal_Template_JavaInstalled;
+	p.LoadZenComponent = _CSP_Portal_Template_LoadZenComponent;
+	p.MonitorBackgroundTask = _CSP_Portal_Template_MonitorBackgroundTask;
+	p.ReallyRefreshContents = _CSP_Portal_Template_ReallyRefreshContents;
+	p.disableCommandButton = _CSP_Portal_Template_disableCommandButton;
+	p.enableCommandButton = _CSP_Portal_Template_enableCommandButton;
+	p.hideCommandButton = _CSP_Portal_Template_hideCommandButton;
+	p.showCommandButton = _CSP_Portal_Template_showCommandButton;
+	p.showDocumentation = _CSP_Portal_Template_showDocumentation;
+}
+
+self._zenClassIdx['About'] = '_CSP_UI_Portal_About';
+self._CSP_UI_Portal_About = function(index,id) {
+	if (index>=0) {_CSP_UI_Portal_About__init(this,index,id);}
+}
+
+self._CSP_UI_Portal_About__init = function(o,index,id) {
+	('undefined' == typeof _CSP_UI_Portal_Template__init) ?zenMaster._CSP_UI_Portal_Template__init(o,index,id):_CSP_UI_Portal_Template__init(o,index,id);
+	o.ParentURL = '\/csp\/sys\/%25CSP.Portal.Home.zen';
+	o.StdTitle = 'About This System';
+	o.ValidationErrorMsg = 'There was a problem with the form. See the highlighted fields below.';
+	o.aboutPage = '_CSP.UI.Portal.About.zen';
+	o.contactPage = '\/csp\/sys\/%25CSP.UI.Portal.Contact.cls';
+	o.enableAutoRefresh = false;
+	o.homePage = '\/csp\/sys\/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS';
+	o.lblTitle = 'About This System';
+	o.limitPopups = false;
+	o.useSoftModals = true;
+}
+function _CSP_UI_Portal_About_serialize(set,s)
+{
+	var o = this;s[0]='625943509';s[1]=o.index;s[2]=o.id;s[3]=o.name;s[4]=set.addObject(o.parent,'parent');s[5]=set.addObject(o.composite,'composite');s[6]=o.FirstFailed;s[7]=o.HelpAddress;s[8]=(o.ISREADONLY?1:0);s[9]=(o.InvalidParam?1:0);s[10]=(o.IsEMSReadOnly?1:0);s[11]=(o.IsEditForm?1:0);s[12]=o.LocatorHeader;s[13]=set.addObject(o.OnclickArray,'OnclickArray');s[14]=o.PID;s[15]=o.ParentURL;s[16]=o.SVGClassList;s[17]=o.StdTitle;s[18]=o.UserSVGPackageList;s[19]=o.ValidationErrorMsg;s[20]=o.aboutPage;s[21]=o.align;s[22]=o.aux;s[23]=o.backgroundTimerInterval;s[24]=o.cellAlign;s[25]=o.cellSize;s[26]=o.cellStyle;s[27]=o.cellVAlign;s[28]=set.serializeList(o,o.children,true,'children');s[29]=o.contactPage;s[30]=o.containerStyle;s[31]=o.cssLevel;s[32]=o.currSortMode;s[33]=o.currStep;s[34]=o.currViewMode;s[35]=(o.designMode?1:0);s[36]=(o.disabled?1:0);s[37]=(o.dragAndDrop?1:0);s[38]=(o.dragEnabled?1:0);s[39]=(o.dropEnabled?1:0);s[40]=(o.dynamic?1:0);s[41]=(o.enableAutoRefresh?1:0);s[42]=o.enclosingClass;s[43]=o.enclosingStyle;s[44]=o.error;s[45]=o.groupClass;s[46]=o.groupStyle;s[47]=o.height;s[48]=(o.hidden?1:0);s[49]=o.hint;s[50]=o.hintClass;s[51]=o.hintStyle;s[52]=o.home;s[53]=o.homePage;s[54]=(o.inlineSVG?1:0);s[55]=(o.isPopup?1:0);s[56]=(o.isSoftModal?1:0);s[57]=o.label;s[58]=o.labelClass;s[59]=o.labelDisabledClass;s[60]=o.labelPosition;s[61]=o.labelStyle;s[62]=o.lastModalIndex;s[63]=o.layout;s[64]=o.lblTitle;s[65]=(o.limitPopups?1:0);s[66]=o.nextIndex;s[67]=o.onafterdrag;s[68]=o.onbeforedrag;s[69]=o.onclick;s[70]=o.ondrag;s[71]=o.ondrop;s[72]=o.onhide;s[73]=o.onoverlay;s[74]=o.onrefresh;s[75]=o.onshow;s[76]=o.onupdate;s[77]=o.overlayMode;s[78]=(o.pageModified?1:0);s[79]=o.popupParent;s[80]=o.renderFlag;s[81]=o.searchKey;s[82]=(o.showLabel?1:0);s[83]=o.slice;s[84]=o.title;s[85]=o.tuple;s[86]=(o.useSVG?1:0);s[87]=(o.useSoftModals?1:0);s[88]=o.valign;s[89]=(o.visible?1:0);s[90]=o.width;s[91]=(o.zenPersistentPopup?1:0);
+}
+function _CSP_UI_Portal_About_getSettings(s)
+{
+	s['name'] = 'string';
+	s['enableAutoRefresh'] = 'boolean';
+	this.invokeSuper('getSettings',arguments);
+}
+
+self._CSP_UI_Portal_About_callChangeLang = function(preflang) {
+	var ok = this.ChangeLang(preflang);
+	self.document.location.reload();
+}
+
+self._CSP_UI_Portal_About_disableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButtonDisabled";
+	button.style.cursor = "default";
+	// if we haven't set anything into OnclickArray, it needs to be initialized as an Array
+	if (this.OnclickArray == null) {
+		this.OnclickArray = new Array();
+	}
+	// if we've already stored the button's value, return
+	if (typeof(this.OnclickArray[buttonName]) != 'undefined') {
+		button['onclick'] = null;		// DTB932 - Clear onclick for the current button before exiting here
+		return;
+	}
+	// save the current onclick contents into the onclick array
+	var onclickContents = button['onclick'];
+	if (typeof(onclickContents) != "function") {
+		this.OnclickArray[buttonName] = new Function(onclickContents);
+	} else {
+		this.OnclickArray[buttonName] = onclickContents;
+	}
+	button['onclick'] = null;
+}
+
+self._CSP_UI_Portal_About_enableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButton";
+	button.style.cursor = "pointer";
+	// if the onclick array is initialized and has a value for this button, add it
+	if ((this.OnclickArray != null) && (this.OnclickArray[buttonName] != undefined)) {
+		button['onclick'] = this.OnclickArray[buttonName];
+	}
+}
+
+self._CSP_UI_Portal_About_hideCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "none";
+}
+
+self._CSP_UI_Portal_About_showCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "";
+}
+
+self._CSP_UI_Portal_About_ChangeLang = function(preflang) {
+	return zenClassMethod(this,'ChangeLang','L','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_About_CheckAllBlanks = function(string) {
+	return zenClassMethod(this,'CheckAllBlanks','L','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_About_DoLogout = function() {
+	return zenClassMethod(this,'DoLogout','','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_About_GetCSPURL = function(link) {
+	return zenClassMethod(this,'GetCSPURL','L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_About_GetDocURL = function(pHelpAddress) {
+	return zenClassMethod(this,'GetDocURL','L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_About_GetHomePage = function() {
+	return zenClassMethod(this,'GetHomePage','','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_About_GetNewURL = function(pNS,pPage) {
+	return zenClassMethod(this,'GetNewURL','L,L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_About_JavaInstalled = function() {
+	return zenClassMethod(this,'JavaInstalled','','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_About_LoadZenComponent = function(pNamespace,pName,pClassName,pCSSLevel) {
+	return zenClassMethod(this,'LoadZenComponent','L,L,L,L','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_About_MonitorBackgroundTask = function(pTaskID) {
+	zenClassMethod(this,'MonitorBackgroundTask','L','',arguments);
+}
+
+self._CSP_UI_Portal_About_ReallyRefreshContents = function() {
+	zenInstanceMethod(this,'ReallyRefreshContents','','',arguments);
+}
+self._CSP_UI_Portal_About__Loader = function() {
+	zenLoadClass('_CSP_UI_Portal_Template');
+	_CSP_UI_Portal_About.prototype = zenCreate('_CSP_UI_Portal_Template',-1);
+	var p = _CSP_UI_Portal_About.prototype;
+	if (null==p) {return;}
+	p.constructor = _CSP_UI_Portal_About;
+	p.superClass = ('undefined' == typeof _CSP_UI_Portal_Template) ? zenMaster._CSP_UI_Portal_Template.prototype:_CSP_UI_Portal_Template.prototype;
+	p.__ZENcomponent = true;
+	p._serverClass = '%CSP.UI.Portal.About';
+	p._type = 'About';
+	p.serialize = _CSP_UI_Portal_About_serialize;
+	p.getSettings = _CSP_UI_Portal_About_getSettings;
+	p.ChangeLang = _CSP_UI_Portal_About_ChangeLang;
+	p.CheckAllBlanks = _CSP_UI_Portal_About_CheckAllBlanks;
+	p.DoLogout = _CSP_UI_Portal_About_DoLogout;
+	p.GetCSPURL = _CSP_UI_Portal_About_GetCSPURL;
+	p.GetDocURL = _CSP_UI_Portal_About_GetDocURL;
+	p.GetHomePage = _CSP_UI_Portal_About_GetHomePage;
+	p.GetNewURL = _CSP_UI_Portal_About_GetNewURL;
+	p.JavaInstalled = _CSP_UI_Portal_About_JavaInstalled;
+	p.LoadZenComponent = _CSP_UI_Portal_About_LoadZenComponent;
+	p.MonitorBackgroundTask = _CSP_UI_Portal_About_MonitorBackgroundTask;
+	p.ReallyRefreshContents = _CSP_UI_Portal_About_ReallyRefreshContents;
+	p.callChangeLang = _CSP_UI_Portal_About_callChangeLang;
+	p.disableCommandButton = _CSP_UI_Portal_About_disableCommandButton;
+	p.enableCommandButton = _CSP_UI_Portal_About_enableCommandButton;
+	p.hideCommandButton = _CSP_UI_Portal_About_hideCommandButton;
+	p.showCommandButton = _CSP_UI_Portal_About_showCommandButton;
+}
+
+self._zenClassIdx['Template'] = '_CSP_UI_Portal_Template';
+self._CSP_UI_Portal_Template = function(index,id) {
+	if (index>=0) {_CSP_UI_Portal_Template__init(this,index,id);}
+}
+
+self._CSP_UI_Portal_Template__init = function(o,index,id) {
+	('undefined' == typeof _CSP_Portal_Template__init) ?zenMaster._CSP_Portal_Template__init(o,index,id):_CSP_Portal_Template__init(o,index,id);
+	o.FirstFailed = '';
+	o.HelpAddress = '';
+	o.InvalidParam = false;
+	o.IsEMSReadOnly = false;
+	o.IsEditForm = false;
+	o.OnclickArray = null;
+	o.PID = '';
+	o.ParentURL = '\/csp\/sys\/%25CSP.Portal.Home.zen';
+	o.StdTitle = 'System Management Portal Template';
+	o.ValidationErrorMsg = 'There was a problem with the form. See the highlighted fields below.';
+	o.aboutPage = '_CSP.UI.Portal.About.zen';
+	o.contactPage = '\/csp\/sys\/%25CSP.UI.Portal.Contact.cls';
+	o.enableAutoRefresh = false;
+	o.homePage = '\/csp\/sys\/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS';
+	o.lblTitle = 'System Management Portal Template';
+	o.limitPopups = false;
+	o.useSoftModals = true;
+}
+function _CSP_UI_Portal_Template_serialize(set,s)
+{
+	var o = this;s[0]='625943509';s[1]=o.index;s[2]=o.id;s[3]=o.name;s[4]=set.addObject(o.parent,'parent');s[5]=set.addObject(o.composite,'composite');s[6]=o.FirstFailed;s[7]=o.HelpAddress;s[8]=(o.ISREADONLY?1:0);s[9]=(o.InvalidParam?1:0);s[10]=(o.IsEMSReadOnly?1:0);s[11]=(o.IsEditForm?1:0);s[12]=o.LocatorHeader;s[13]=set.addObject(o.OnclickArray,'OnclickArray');s[14]=o.PID;s[15]=o.ParentURL;s[16]=o.SVGClassList;s[17]=o.StdTitle;s[18]=o.UserSVGPackageList;s[19]=o.ValidationErrorMsg;s[20]=o.aboutPage;s[21]=o.align;s[22]=o.aux;s[23]=o.backgroundTimerInterval;s[24]=o.cellAlign;s[25]=o.cellSize;s[26]=o.cellStyle;s[27]=o.cellVAlign;s[28]=set.serializeList(o,o.children,true,'children');s[29]=o.contactPage;s[30]=o.containerStyle;s[31]=o.cssLevel;s[32]=o.currSortMode;s[33]=o.currStep;s[34]=o.currViewMode;s[35]=(o.designMode?1:0);s[36]=(o.disabled?1:0);s[37]=(o.dragAndDrop?1:0);s[38]=(o.dragEnabled?1:0);s[39]=(o.dropEnabled?1:0);s[40]=(o.dynamic?1:0);s[41]=(o.enableAutoRefresh?1:0);s[42]=o.enclosingClass;s[43]=o.enclosingStyle;s[44]=o.error;s[45]=o.groupClass;s[46]=o.groupStyle;s[47]=o.height;s[48]=(o.hidden?1:0);s[49]=o.hint;s[50]=o.hintClass;s[51]=o.hintStyle;s[52]=o.home;s[53]=o.homePage;s[54]=(o.inlineSVG?1:0);s[55]=(o.isPopup?1:0);s[56]=(o.isSoftModal?1:0);s[57]=o.label;s[58]=o.labelClass;s[59]=o.labelDisabledClass;s[60]=o.labelPosition;s[61]=o.labelStyle;s[62]=o.lastModalIndex;s[63]=o.layout;s[64]=o.lblTitle;s[65]=(o.limitPopups?1:0);s[66]=o.nextIndex;s[67]=o.onafterdrag;s[68]=o.onbeforedrag;s[69]=o.onclick;s[70]=o.ondrag;s[71]=o.ondrop;s[72]=o.onhide;s[73]=o.onoverlay;s[74]=o.onrefresh;s[75]=o.onshow;s[76]=o.onupdate;s[77]=o.overlayMode;s[78]=(o.pageModified?1:0);s[79]=o.popupParent;s[80]=o.renderFlag;s[81]=o.searchKey;s[82]=(o.showLabel?1:0);s[83]=o.slice;s[84]=o.title;s[85]=o.tuple;s[86]=(o.useSVG?1:0);s[87]=(o.useSoftModals?1:0);s[88]=o.valign;s[89]=(o.visible?1:0);s[90]=o.width;s[91]=(o.zenPersistentPopup?1:0);
+}
+function _CSP_UI_Portal_Template_getSettings(s)
+{
+	s['name'] = 'string';
+	s['FirstFailed'] = 'string';
+	s['HelpAddress'] = 'string';
+	s['InvalidParam'] = 'string';
+	s['IsEMSReadOnly'] = 'string';
+	s['IsEditForm'] = 'string';
+	s['OnclickArray'] = 'string';
+	s['PID'] = 'string';
+	s['ParentURL'] = 'string';
+	s['ValidationErrorMsg'] = 'string';
+	s['enableAutoRefresh'] = 'boolean';
+	this.invokeSuper('getSettings',arguments);
+}
+
+self._CSP_UI_Portal_Template_afterSave = function(result) {
+	if (result) {
+		if (result.ok == 1){
+			this.setModified(false);
+			if ((typeof(result.Message) != "undefined") && (result.Message != "")) {
+				this.showMsg(result.Message,0);
+			} else {
+				this.doCancel();
+			}
+		} else {
+			this.showMsg(result.ErrorMessage,1);
+		}
+	} else {
+		this.showMsg($$$Text("Unexpected error while attempting to save"),1);
+	}
+}
+
+self._CSP_UI_Portal_Template_afterValidate = function() {
+	this.showMsg(this.ValidationErrorMsg,1);
+	if (this.FirstFailed) {
+		var field = this.FirstFailed;
+		zen(field).focus();
+	}
+}
+
+self._CSP_UI_Portal_Template_disableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButtonDisabled";
+	button.style.cursor = "default";
+	// if we haven't set anything into OnclickArray, it needs to be initialized as an Array
+	if (this.OnclickArray == null) {
+		this.OnclickArray = new Array();
+	}
+	// if we've already stored the button's value, return
+	if (typeof(this.OnclickArray[buttonName]) != 'undefined') {
+		button['onclick'] = null;		// DTB932 - Clear onclick for the current button before exiting here
+		return;
+	}
+	// save the current onclick contents into the onclick array
+	var onclickContents = button['onclick'];
+	if (typeof(onclickContents) != "function") {
+		this.OnclickArray[buttonName] = new Function(onclickContents);
+	} else {
+		this.OnclickArray[buttonName] = onclickContents;
+	}
+	button['onclick'] = null;
+}
+
+self._CSP_UI_Portal_Template_doCancel = function() {
+	this.setModified(false);
+	self.document.location = this.ParentURL;
+}
+
+self._CSP_UI_Portal_Template_doModified = function() {
+	this.resetMsg('');
+	this.setModified(true);
+}
+
+self._CSP_UI_Portal_Template_enableCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.className = "commandButton";
+	button.style.cursor = "pointer";
+	// if the onclick array is initialized and has a value for this button, add it
+	if ((this.OnclickArray != null) && (this.OnclickArray[buttonName] != undefined)) {
+		button['onclick'] = this.OnclickArray[buttonName];
+	}
+}
+
+self._CSP_UI_Portal_Template_hideCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "none";
+}
+
+self._CSP_UI_Portal_Template_isButtonDisabled = function(buttonName) {
+	return (self.document.getElementById("command_"+buttonName).className == "commandButtonDisabled");
+}
+
+self._CSP_UI_Portal_Template_onloadHandler = function() {
+	this.invokeSuper('onloadHandler');
+	if (this.IsEMSReadOnly || this.InvalidParam) {
+		this.disableCommandButton('btnSave');
+		this.disableCommandButton('btnNew');
+	}
+}
+
+self._CSP_UI_Portal_Template_resetMsg = function() {
+	zen("idRespond").setValue('');
+ 	zen("idRespond").setHidden(true);
+}
+
+self._CSP_UI_Portal_Template_showCommandButton = function(buttonName) {
+	var button = document.getElementById("command_"+buttonName);
+	if (button == null) return;
+	button.style.display = "";
+}
+
+self._CSP_UI_Portal_Template_showMsg = function(msg,isErr) {
+	try {
+	 	if (typeof(isErr) != "undefined") {
+		 	var noteClass = (isErr == 1) ? "errorNote" : "note";
+		 	if (isErr == 2) {
+			 	noteClass = 'successNote';	
+		 	}
+		 	zen("idRespond").setProperty("enclosingClass",noteClass);
+	 	}
+		zen("idRespond").setValue(msg);
+	 	zen("idRespond").setHidden(false);
+	}
+  	catch(ex) {
+		alert("showMsg ERROR: " + ex);
+	}
+}
+
+self._CSP_UI_Portal_Template_trimSpace = function(zenProp) {
+	var string = zenTrim(zenProp.getValue());
+	zenProp.setValue(string.replace(/\s+/g, ''));
+}
+
+self._CSP_UI_Portal_Template_validateRequired = function(ctl,pass,type,checkRange,minVal,maxVal) {
+	var ok = true;
+	var value = ctl.getValue();
+	switch (type) {
+		/// contains at least one numeric character
+		case "N":
+			if (!(value.match(/\d/))) {
+				ok = false;
+			} else if (checkRange == true) {
+				if (isNaN(value)) {
+					// fail if not numeric
+					ok = false;
+				} else if ((value < minVal) || (value > maxVal)) {
+					// fail if not in range
+					ok = false;
+				}
+			}
+			break;
+		case "S":
+		/// contains at least one character after striping all blanks
+			if (zenTrim(value) == '') {
+				ok = false;
+			}
+			break;
+	}
+	if (ok == false) {
+		ctl.setProperty("hintClass","redText");
+		ctl.setProperty("controlClass","zenInvalid");
+		if (pass) {
+			this.FirstFailed = ctl.getProperty("id");
+		}
+	} else {
+		ctl.setProperty("hintClass","helpText");
+		ctl.setProperty("controlClass","");
+	}
+	return ok;
+}
+
+self._CSP_UI_Portal_Template_CheckAllBlanks = function(string) {
+	return zenClassMethod(this,'CheckAllBlanks','L','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_Template_DoLogout = function() {
+	return zenClassMethod(this,'DoLogout','','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_Template_GetCSPURL = function(link) {
+	return zenClassMethod(this,'GetCSPURL','L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_Template_GetDocURL = function(pHelpAddress) {
+	return zenClassMethod(this,'GetDocURL','L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_Template_GetHomePage = function() {
+	return zenClassMethod(this,'GetHomePage','','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_Template_GetNewURL = function(pNS,pPage) {
+	return zenClassMethod(this,'GetNewURL','L,L','VARCHAR',arguments);
+}
+
+self._CSP_UI_Portal_Template_JavaInstalled = function() {
+	return zenClassMethod(this,'JavaInstalled','','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_Template_LoadZenComponent = function(pNamespace,pName,pClassName,pCSSLevel) {
+	return zenClassMethod(this,'LoadZenComponent','L,L,L,L','BOOLEAN',arguments);
+}
+
+self._CSP_UI_Portal_Template_MonitorBackgroundTask = function(pTaskID) {
+	zenClassMethod(this,'MonitorBackgroundTask','L','',arguments);
+}
+
+self._CSP_UI_Portal_Template_ReallyRefreshContents = function() {
+	zenInstanceMethod(this,'ReallyRefreshContents','','',arguments);
+}
+self._CSP_UI_Portal_Template__Loader = function() {
+	zenLoadClass('_CSP_Portal_Template');
+	_CSP_UI_Portal_Template.prototype = zenCreate('_CSP_Portal_Template',-1);
+	var p = _CSP_UI_Portal_Template.prototype;
+	if (null==p) {return;}
+	p.constructor = _CSP_UI_Portal_Template;
+	p.superClass = ('undefined' == typeof _CSP_Portal_Template) ? zenMaster._CSP_Portal_Template.prototype:_CSP_Portal_Template.prototype;
+	p.__ZENcomponent = true;
+	p._serverClass = '%CSP.UI.Portal.Template';
+	p._type = 'Template';
+	p.serialize = _CSP_UI_Portal_Template_serialize;
+	p.getSettings = _CSP_UI_Portal_Template_getSettings;
+	p.CheckAllBlanks = _CSP_UI_Portal_Template_CheckAllBlanks;
+	p.DoLogout = _CSP_UI_Portal_Template_DoLogout;
+	p.GetCSPURL = _CSP_UI_Portal_Template_GetCSPURL;
+	p.GetDocURL = _CSP_UI_Portal_Template_GetDocURL;
+	p.GetHomePage = _CSP_UI_Portal_Template_GetHomePage;
+	p.GetNewURL = _CSP_UI_Portal_Template_GetNewURL;
+	p.JavaInstalled = _CSP_UI_Portal_Template_JavaInstalled;
+	p.LoadZenComponent = _CSP_UI_Portal_Template_LoadZenComponent;
+	p.MonitorBackgroundTask = _CSP_UI_Portal_Template_MonitorBackgroundTask;
+	p.ReallyRefreshContents = _CSP_UI_Portal_Template_ReallyRefreshContents;
+	p.afterSave = _CSP_UI_Portal_Template_afterSave;
+	p.afterValidate = _CSP_UI_Portal_Template_afterValidate;
+	p.disableCommandButton = _CSP_UI_Portal_Template_disableCommandButton;
+	p.doCancel = _CSP_UI_Portal_Template_doCancel;
+	p.doModified = _CSP_UI_Portal_Template_doModified;
+	p.enableCommandButton = _CSP_UI_Portal_Template_enableCommandButton;
+	p.hideCommandButton = _CSP_UI_Portal_Template_hideCommandButton;
+	p.isButtonDisabled = _CSP_UI_Portal_Template_isButtonDisabled;
+	p.onloadHandler = _CSP_UI_Portal_Template_onloadHandler;
+	p.resetMsg = _CSP_UI_Portal_Template_resetMsg;
+	p.showCommandButton = _CSP_UI_Portal_Template_showCommandButton;
+	p.showMsg = _CSP_UI_Portal_Template_showMsg;
+	p.trimSpace = _CSP_UI_Portal_Template_trimSpace;
+	p.validateRequired = _CSP_UI_Portal_Template_validateRequired;
+}
+// ================================================================================
+function zenCreatePageModel() {
+try {
+var o = null;
+zenCreate('_CSP_UI_Portal_About',1,'');
+zenCreate('_ZEN_Component_group',2,'');
+zenCreate('_ZEN_Component_html',3,'title');
+zenCreate('_ZEN_Component_group',4,'');
+zenCreate('_ZEN_Component_csMenuBar',5,'mainMenu');
+zenCreate('_ZEN_Component_csMenuBarItem',6,'');
+zenCreate('_ZEN_Component_contextMenu',7,'menuHolder');
+zenCreate('_ZEN_Component_html',8,'toolRibbon');
+zenCreate('_ZEN_Component_vgroup',9,'');
+zenCreate('_ZEN_Component_pane',10,'');
+zenCreate('_ZEN_Component_html',11,'');
+zenCreate('_ZEN_Component_csMenuItem',12,'');
+zenCreate('_ZEN_Component_csMenuItem',13,'');
+zenCreate('_ZEN_Component_csMenuItem',14,'');
+zenCreate('_ZEN_Component_csMenuSeparator',15,'');
+zenCreate('_ZEN_Component_csMenuItem',16,'');
+zenCreate('_ZEN_Component_csMenuItem',17,'');
+zenCreate('_ZEN_Component_csMenuItem',18,'');
+zenCreate('_ZEN_Component_csMenuItem',19,'');
+zenCreate('_ZEN_Component_csMenuItem',20,'');
+zenCreate('_ZEN_Component_csMenuSeparator',21,'');
+zenCreate('_ZEN_Component_csMenuItem',22,'');
+zenCreate('_ZEN_Component_csMenuItem',23,'');
+zenCreate('_ZEN_Component_csMenuItem',24,'');
+zenCreate('_ZEN_Component_csMenuItem',25,'');
+zenCreate('_ZEN_Component_csMenuSeparator',26,'');
+zenCreate('_ZEN_Component_csMenuItem',27,'');
+zenCreate('_ZEN_Component_csMenuItem',28,'');
+zenCreate('_ZEN_Component_csMenuItem',29,'');
+zenCreate('_ZEN_Component_csMenuItem',30,'');
+zenCreate('_ZEN_Component_csMenuItem',31,'');
+
+o = _zenIndex[1];
+o.LocatorHeader = 'About This System';
+o.SVGClassList = '%CSP.UI.Portal.About';
+o.children[0] = _zenIndex[2];
+o.children[1] = _zenIndex[8];
+o.children[2] = _zenIndex[9];
+o.dragAndDrop = true;
+o.dropEnabled = true;
+o.homePage = '\/csp\/sys\/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS';
+o.isPopup = false;
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.nextIndex = 31;
+o.title = '#(%page.StdTitle)#';
+
+o = _zenIndex[2];
+o.children[0] = _zenIndex[3];
+o.children[1] = _zenIndex[4];
+o.containerStyle = 'position:relative; top:0px; left:0px';
+o.layout = 'DFI0Gm9xGxf4NWs7CZBP0A';
+o.parent = _zenIndex[1];
+
+o = _zenIndex[3];
+o.OnDrawContent = 'Qe_yzZvixMNuVLwgWaDWJg';
+o.id = 'title';
+o.parent = _zenIndex[2];
+
+o = _zenIndex[4];
+o.children[0] = _zenIndex[5];
+o.enclosingStyle = 'position:absolute; top:19px; right:40px;';
+o.layout = 'DFI0Gm9xGxf4NWs7CZBP0A';
+o.parent = _zenIndex[2];
+
+o = _zenIndex[5];
+o.children[0] = _zenIndex[6];
+o.id = 'mainMenu';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.parent = _zenIndex[4];
+o.width = '50px';
+
+o = _zenIndex[6];
+o.caption = 'Menu';
+o.children[0] = _zenIndex[7];
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.parent = _zenIndex[5];
+
+o = _zenIndex[7];
+o.children[0] = _zenIndex[12];
+o.children[1] = _zenIndex[13];
+o.children[2] = _zenIndex[14];
+o.children[3] = _zenIndex[15];
+o.children[4] = _zenIndex[16];
+o.children[5] = _zenIndex[17];
+o.children[6] = _zenIndex[18];
+o.children[7] = _zenIndex[19];
+o.children[8] = _zenIndex[20];
+o.children[9] = _zenIndex[21];
+o.children[10] = _zenIndex[22];
+o.children[11] = _zenIndex[23];
+o.children[12] = _zenIndex[24];
+o.children[13] = _zenIndex[25];
+o.children[14] = _zenIndex[26];
+o.children[15] = _zenIndex[27];
+o.children[16] = _zenIndex[28];
+o.children[17] = _zenIndex[29];
+o.children[18] = _zenIndex[30];
+o.children[19] = _zenIndex[31];
+o.id = 'menuHolder';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.parent = _zenIndex[6];
+
+o = _zenIndex[8];
+o.OnDrawContent = 'MU4ErmFKUJv$41MLBzjLlQ';
+o.id = 'toolRibbon';
+o.parent = _zenIndex[1];
+
+o = _zenIndex[9];
+o.children[0] = _zenIndex[10];
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.parent = _zenIndex[1];
+o.valign = 'top';
+o.width = '100%';
+
+o = _zenIndex[10];
+o.cellAlign = 'center';
+o.children[0] = _zenIndex[11];
+o.containerStyle = 'padding:20px';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.paneName = 'contentPane';
+o.parent = _zenIndex[9];
+o.width = '100%';
+
+o = _zenIndex[11];
+o.OnDrawContent = 'WV7M92BhBG4zpBqp$GL42Q';
+o.parent = _zenIndex[10];
+
+o = _zenIndex[12];
+o.caption = 'Configure Namespaces';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.Namespaces.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[13];
+o.caption = 'Configure Databases';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.Databases.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[14];
+o.caption = 'Configure Memory';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/mgr\/%25CSP.UI.Portal.MemoryStartup.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[15];
+o.parent = _zenIndex[7];
+
+o = _zenIndex[16];
+o.caption = 'Manage Web Applications';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Applications.WebList.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[17];
+o.caption = 'Manage Users';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Users.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[18];
+o.caption = 'Manage Roles';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Roles.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[19];
+o.caption = 'Manage Services';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Services.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[20];
+o.caption = 'Manage Resources';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/sec\/%25CSP.UI.Portal.Resources.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[21];
+o.parent = _zenIndex[7];
+
+o = _zenIndex[22];
+o.caption = 'View SQL';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.SQL.Home.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[23];
+o.caption = 'View Classes';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.ClassList.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[24];
+o.caption = 'View Routines';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.RoutineList.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[25];
+o.caption = 'View Globals';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/exp\/%25CSP.UI.Portal.GlobalList.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[26];
+o.parent = _zenIndex[7];
+
+o = _zenIndex[27];
+o.caption = 'View System Dashboard';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/op\/UtilDashboard.csp\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[28];
+o.caption = 'Manage Locks';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/op\/%25CSP.UI.Portal.Locks.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[29];
+o.caption = 'View Processes';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/op\/%25CSP.UI.Portal.Processes.zen\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[30];
+o.caption = 'View Messages Log';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/op\/UtilSysConsoleLog.csp\');';
+o.parent = _zenIndex[7];
+
+o = _zenIndex[31];
+o.caption = 'View Background Tasks';
+o.layout = 'GqpKUYoPwyAmELq41sCSNg';
+o.onclick = 'zenPage.goMenu(\'\/csp\/sys\/%25CSP.UI.Portal.BackgroundTaskList.zen\');';
+o.parent = _zenIndex[7];
+zenPage = _zenIndex[1];
+}
+catch(ex) {
+ zenExceptionHandler(ex,arguments,'Error building ZEN Page Model.');
+}
+}
+
+window.onload = function() {
+	if (null == self.zenASSERT) { alert('ZEN ERROR:\nRequired include file, zenutils.js, not found.'); window.stop(); return; }
+	if (14 != self.zenUtilsVersion) { alert('ZEN ERROR:\nzenutils.js has the wrong version number.\nPage version:14\nzenutils.js: ' + (self.zenUtilsVersion ? self.zenUtilsVersion : '')); window.stop(); return; }
+	if (14 != self.js_zen_core) { alert('ZEN ERROR:\nInclude file is missing or has the wrong version number:\nPage version:14\nZEN_Component__core.js: ' + (self.js_zen_core ? self.js_zen_core : '')); window.stop(); return ; }
+ 
+	zenPageEventHandler('onload'); }
+window.onbeforeunload = function() { return zenPageEventHandler('onunload'); }
+window.onresize = function() { zenPageEventHandler('onresize'); }
+window.onkeydown = function(event) { return zenPageEventHandler('onkeydown',event); }
+window.onkeyup = function(event) { return zenPageEventHandler('onkeyup',event); }
+	
+//]]>
+</script>
+</body>
+</html>
+<!-- .011044 -->

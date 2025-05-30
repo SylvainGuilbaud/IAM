@@ -1,0 +1,1 @@
+deck gateway sync

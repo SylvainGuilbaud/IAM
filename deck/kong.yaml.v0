@@ -1,0 +1,208 @@
+_format_version: "3.0"
+services:
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.1.14
+  name: common
+  path: /common
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: pop
+    path_handling: v0
+    paths:
+    - /pop
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.1.14
+  name: crud
+  path: /
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: crud
+    path_handling: v0
+    paths:
+    - /crud
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - DELETE
+    name: crud-api-delete
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: crud-api-get
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - POST
+    name: crud-api-post
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.1.14
+  name: management-portal
+  path: /is24
+  port: 80
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: sys
+    path_handling: v0
+    paths:
+    - /csp/sys
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.1.14
+  name: management-portal-container
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.1.14
+  name: test-iris
+  path: /is24
+  port: 80
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: 01875226-79b0-4e52-89a6-5a4dfdaf3632
+    methods:
+    - GET
+    path_handling: v0
+    paths:
+    - /api/atelier
+    plugins:
+    - config:
+        day: null
+        error_code: 429
+        error_message: API rate limit exceeded
+        fault_tolerant: true
+        header_name: null
+        hide_client_headers: false
+        hour: null
+        limit_by: consumer
+        minute: 2
+        month: null
+        path: null
+        policy: local
+        redis_database: 0
+        redis_host: null
+        redis_password: null
+        redis_port: 6379
+        redis_server_name: null
+        redis_ssl: false
+        redis_ssl_verify: false
+        redis_timeout: 2000
+        redis_username: null
+        second: null
+        sync_rate: -1
+        year: null
+      enabled: true
+      name: rate-limiting
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: portal
+    path_handling: v0
+    paths:
+    - /csp/sys
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000

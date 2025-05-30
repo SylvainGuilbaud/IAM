@@ -1,0 +1,27 @@
+{
+  "status": { "errors": [], "summary": "" },
+  "console": [],
+  "result": {
+    "content": {
+      "version": "IRIS for UNIX (Apple macOS for Apple Silicon) 2024.1.0L (Build 223U) Wed Jan 24 2024 22:28:29 EST",
+      "id": "433E7814-B9ED-11EE-88FE-BCD074693621",
+      "api": 8,
+      "features": [
+        { "name": "DEEPSEE", "enabled": true },
+        { "name": "ENSEMBLE", "enabled": true },
+        { "name": "HEALTHSHARE", "enabled": true }
+      ],
+      "namespaces": [
+        "%SYS",
+        "HSCUSTOM",
+        "HSLIB",
+        "HSSYS",
+        "IRISAPP",
+        "MONDIALTISSUS",
+        "SCC",
+        "TEST",
+        "USER"
+      ]
+    }
+  }
+}

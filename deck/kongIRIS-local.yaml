@@ -1,0 +1,321 @@
+_format_version: "1.1"
+consumers:
+- basicauth_credentials:
+  - password: 993aa09aa1f5e9acd983d8b7e51a09ccfeb382c4
+    username: CRUD
+  username: CRUD
+- basicauth_credentials:
+  - password: 162f5e06634b258393b1638d53642fe1d0519b51
+    username: IAM
+  username: IAM
+- basicauth_credentials:
+  - password: 79d02369e30c8ba02d9ea2ca94cb8d4f1d2052a3
+    username: Sylvain
+  username: Sylvain
+plugins:
+- config:
+    anonymous: null
+    hide_credentials: false
+  enabled: true
+  name: basic-auth
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  route: iam-license
+  service: iris
+- config:
+    custom_fields_by_lua: {}
+    path: /tmp/IAM.log.json
+    reopen: false
+  enabled: true
+  name: file-log
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+- config:
+    day: null
+    fault_tolerant: true
+    header_name: null
+    hide_client_headers: false
+    hour: null
+    limit_by: consumer
+    minute: 3
+    month: null
+    path: null
+    policy: cluster
+    redis_database: 0
+    redis_host: null
+    redis_password: null
+    redis_port: 6379
+    redis_server_name: null
+    redis_ssl: false
+    redis_ssl_verify: false
+    redis_timeout: 2000
+    redis_username: null
+    second: null
+    year: null
+  enabled: true
+  name: rate-limiting
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  route: iam-license
+  service: iris
+services:
+- connect_timeout: 60000
+  enabled: true
+  host: 172.20.10.13
+  name: iris
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: atelier
+    path_handling: v0
+    paths:
+    - /api/atelier/
+    plugins:
+    - config:
+        anonymous: null
+        hide_credentials: false
+      enabled: true
+      name: basic-auth
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: doc
+    path_handling: v0
+    paths:
+    - /csp/documatic/%25CSP.Documatic.cls
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: iam-license
+    path_handling: v0
+    paths:
+    - /api/iam/license
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: monitor-metrics
+    path_handling: v0
+    paths:
+    - /api/monitor/metrics
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 172.20.10.13
+  name: iris-common
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: app-list
+    path_handling: v0
+    paths:
+    - /common/list
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: app-pop
+    path_handling: v0
+    paths:
+    - /common/pop
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: app-version
+    path_handling: v0
+    paths:
+    - /common/
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 172.20.10.13
+  name: iris-crud
+  port: 52773
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    methods:
+    - POST
+    name: crud-create
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - DELETE
+    name: crud-delete
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: crud-read
+    path_handling: v0
+    paths:
+    - /crud/api/data.test
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - PUT
+    name: crud-update
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: get-all
+    path_handling: v0
+    paths:
+    - /crud/api
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: spec
+    path_handling: v0
+    paths:
+    - /crud/_spec
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    methods:
+    - GET
+    name: version
+    path_handling: v0
+    paths:
+    - /crud/
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
