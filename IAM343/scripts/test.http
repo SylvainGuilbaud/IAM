@@ -1,7 +1,7 @@
 ```http
 
 ### Check IAM license
-GET http://IAM:AAA@192.168.65.1:9092/api/iam/license
+curl -i -X GET http://192.168.65.1:9092/api/iam/license --user IAM:AAA
 
 ### Create a new service in Kong for the UCT application
 curl -i -X POST \
@@ -19,7 +19,8 @@ curl -i -X DELETE \
 --url http://localhost:8001/services/uct 
 
 ### Delete a service in Kong
-DELETE http://IAM:AAAlocalhost:8001/services/uct 
+curl -i -X DELETE \ 
+--url http://localhost:8001/services/uct 
 
 ### Create a route for the UCT service Factories
 curl -i -X POST \
