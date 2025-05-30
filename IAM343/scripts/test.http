@@ -1,0 +1,92 @@
+```http
+
+### Check IAM license
+GET http://IAM:AAA@192.168.65.1:9092/api/iam/license
+
+### Create a new service in Kong for the UCT application
+curl -i -X POST \
+--url http://localhost:8001/services/ \
+--data 'name=uct' \
+--data 'url=http://192.168.65.1:9092/api/uct/'
+
+### create a new service in Kong for the CRUD application
+curl -i -X POST \
+--url http://localhost:8001/services/ \
+--data 'name=uct-crud' \
+
+### Delete a service in Kong
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct 
+
+### Delete a service in Kong
+DELETE http://IAM:AAAlocalhost:8001/services/uct 
+
+### Create a route for the UCT service Factories
+curl -i -X POST \
+--url http://localhost:8001/services/uct/routes \
+--data 'name=uct-factories' \
+--data 'paths=/GetFactories' \
+--data 'strip_path=false'
+
+### Delete a route for the UCT service Factories
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct/routes/uct-factories
+
+### Create a route for the UCT service Properties
+curl -i -X POST \
+--url http://localhost:8001/services/uct/routes \
+--data 'name=uct-properties' \
+--data 'paths=/Properties' \
+--data 'strip_path=false'
+
+### Delete a route for the UCT service Properties
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct/routes/uct-properties
+
+### GetFactories
+curl 'http://localhost:8000/GetFactories' --user _SYSTEM:SYS
+
+### Properties
+curl 'http://localhost:8000/Properties' --user _SYSTEM:SYS
+
+### Add rate limiting plugin to the UCT service
+curl -i -X POST \
+--url http://localhost:8001/services/uct/plugins/ \
+--data 'name=rate-limiting' \
+--data 'config.minute=10' \ 
+--data 'config.hour=20' \
+--data 'config.policy=local' 
+
+### Delete rate limiting plugin from the UCT service
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct/plugins/rate-limiting
+
+### Add basic authentication plugin to the UCT service
+curl -i -X POST \
+--url http://localhost:8001/services/uct/plugins/ \
+--data 'name=basic-auth' \
+--data 'config.hide_credentials=true' \
+### Delete basic authentication plugin from the UCT service
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct/plugins/basic-auth
+### Add CORS plugin to the UCT service
+curl -i -X POST \
+--url http://localhost:8001/services/uct/plugins/ \
+--data 'name=cors' \
+--data 'config.origins=http://localhost:3000' \
+--data 'config.methods=GET, POST, PUT, DELETE' \
+--data 'config.headers=Accept, Authorization, Content-Type, X-Requested-With' \
+--data 'config.exposed_headers=Content-Length, X-Kong-Response-Latency' \
+--data 'config.max_age=3600' \
+--data 'config.credentials=true' 
+
+### Enable developer portal for the UCT application
+curl -i -X PATCH \
+--url http://localhost:8001/services/uct \
+--data 'config.portal=true' \
+--data 'config.portal_path=/uct' \
+--data 'config.portal_subscriptions=true' \
+--data 'config.portal_analytics=true' \
+--data 'config.portal_analytics_path=/uct/analytics' \
+--data 'config.portal_analytics_subscriptions=true' \
+--data 'config.portal_analytics_subscriptions_path=/uct/analytics/subscriptions' 
