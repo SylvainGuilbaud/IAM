@@ -1,1 +1,0 @@
-deck gateway sync getstarted.yaml 

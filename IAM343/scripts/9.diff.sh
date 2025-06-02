@@ -1,1 +1,0 @@
-deck gateway diff getstarted.yaml 
