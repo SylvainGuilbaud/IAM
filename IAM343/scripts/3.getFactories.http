@@ -1,0 +1,2 @@
+### GetFactories
+curl 'http://localhost:8000/GetFactories' --user _SYSTEM:SYS
