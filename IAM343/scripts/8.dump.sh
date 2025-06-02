@@ -1,0 +1,1 @@
+deck gateway dump -o getstarted.yaml
