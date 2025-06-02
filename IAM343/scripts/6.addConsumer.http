@@ -1,0 +1,5 @@
+### Add a new consumer named 'alex'
+curl -X POST http://localhost:8001/consumers -d username=alex
+
+### Add a key-auth plugin to the consumer 'alex'
+curl -X POST http://localhost:8001/consumers/alex/key-auth -d key=hello_world

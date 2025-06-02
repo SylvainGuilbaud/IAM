@@ -1,7 +1,12 @@
 ### Add rate limiting plugin to the UCT service
-curl -i -X POST \
---url http://localhost:8001/services/uct/plugins/ \
---data 'name=rate-limiting' \
---data 'config.minute=10' \ 
---data 'config.hour=20' \
---data 'config.policy=local' 
+
+curl -X POST http://localhost:8001/services/uct/plugins \
+  --data "name=rate-limiting" \
+  --data "config.minute=5" \
+  --data "config.policy=local"
+
+
+# curl -i -X POST http://localhost:8001/plugins \
+#   --data name=rate-limiting \
+#   --data config.minute=5 \
+#   --data config.policy=local

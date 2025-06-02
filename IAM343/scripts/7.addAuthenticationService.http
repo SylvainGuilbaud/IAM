@@ -1,0 +1,3 @@
+curl -X POST http://localhost:8001/services/uct/plugins \
+  --header "Content-Type: application/json" \
+  --data '{"name": "key-auth", "config": {"key_names": ["apikey"]}}'
