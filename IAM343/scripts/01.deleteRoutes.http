@@ -1,0 +1,3 @@
+### Delete a route for the UCT service Factories
+curl -i -X DELETE \
+--url http://localhost:8001/services/uct/routes/uct-factories

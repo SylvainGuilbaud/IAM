@@ -18,9 +18,6 @@ curl -i -X POST \
 curl -i -X DELETE \
 --url http://localhost:8001/services/uct 
 
-### Delete a service in Kong
-curl -i -X DELETE \ 
---url http://localhost:8001/services/uct 
 
 ### Create a route for the UCT service Factories
 curl -i -X POST \
