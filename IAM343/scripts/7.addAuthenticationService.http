@@ -8,3 +8,12 @@ curl -i -X POST \
 --data 'name=request-transformer' \
 --data 'config.add.headers=Authorization:Basic U3VwZXJVc2VyOlNZUw==' \
 --data 'config.replace.headers=Authorization:Basic U3VwZXJVc2VyOlNZUw=='
+
+### Add Request Transformer Plugin to Service
+curl -i -X POST \
+--url http://localhost:8001/services/uct/plugins \
+--data 'name=request-transformer' \
+--data 'config.add.headers=Authorization:Basic X1NZU1RFTTpTWVM=' \
+--data 'config.replace.headers=Authorization:Basic X1NZU1RFTTpTWVM='
+
+
