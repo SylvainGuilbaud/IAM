@@ -68,6 +68,8 @@ services:
         published: 8445
         protocol: tcp
     restart: on-failure
+    volumes:
+      - ./volumes/kong:/usr/local/kong/
   db:
     image: postgres:14.5
     environment:
