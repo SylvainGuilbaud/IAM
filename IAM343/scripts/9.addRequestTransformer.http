@@ -1,0 +1,16 @@
+###  add Request Transformer Plugin to Service
+# curl -X POST http://localhost:8001/services/uct/plugins \
+#   --header "Content-Type: application/json" \
+#   --data '{
+#     "name": "request-transformer",
+#     "config": {
+#       "add": {
+#         "headers": ["Authorization:Basic LW4gX3N5c3RlbTpTWVMK="]
+#       }
+#     }
+#   }'
+
+
+curl -X POST http://localhost:8001/services/uct/plugins \
+    --data "name=request-transformer" \
+    --data "config.add.headers=Authorization:Basic $(echo -n '_SYSTEM:SYS' | base64)"

@@ -1,2 +1,12 @@
 ### GetFactories
 curl 'http://localhost:8000/GetFactories' --user _SYSTEM:SYS
+
+### GetFactories without authentication
+curl 'http://localhost:8000/GetFactories' 
+
+
+### GetFactories without API Manager
+curl 'http://localhost:9092/api/uct/GetFactories' --user _SYSTEM:SYS
+
+### GetFactories without API Manager without authentication
+curl 'http://localhost:9092/api/uct/GetFactories' 

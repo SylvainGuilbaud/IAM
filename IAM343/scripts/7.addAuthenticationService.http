@@ -1,3 +1,10 @@
 curl -X POST http://localhost:8001/services/uct/plugins \
   --header "Content-Type: application/json" \
   --data '{"name": "key-auth", "config": {"key_names": ["apikey"]}}'
+
+### Add Request Transformer Plugin to Service
+curl -i -X POST \
+--url http://localhost:8001/services/uct/plugins \
+--data 'name=request-transformer' \
+--data 'config.add.headers=Authorization:Basic U3VwZXJVc2VyOlNZUw==' \
+--data 'config.replace.headers=Authorization:Basic U3VwZXJVc2VyOlNZUw=='

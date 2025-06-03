@@ -1,0 +1,2 @@
+curl -X POST http://localhost:8001/routes/uct-factories/plugins \
+    --data "name=upstream-basic-auth"

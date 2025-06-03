@@ -1,0 +1,169 @@
+_format_version: "3.0"
+consumers:
+- keyauth_credentials:
+  - key: hello_world
+  username: alex
+- keyauth_credentials:
+  - key: test
+  username: alice
+plugins:
+- config:
+    custom_fields_by_lua: {}
+    path: /tmp/file.log
+    reopen: false
+  enabled: true
+  name: file-log
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+services:
+- connect_timeout: 60000
+  enabled: true
+  host: httpbin.konghq.com
+  name: example-service
+  port: 80
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    name: example-route
+    path_handling: v0
+    paths:
+    - /
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: FRMBP16M1GUILBAUD
+  name: test-iris
+  port: 9092
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: 013c5531-3816-4722-8680-1ebf58002027
+    path_handling: v0
+    paths:
+    - /api/atelier
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: 192.168.65.1
+  name: uct
+  path: /api/uct/
+  plugins:
+  - config:
+      day: null
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      header_name: null
+      hide_client_headers: false
+      hour: null
+      limit_by: consumer
+      minute: 5
+      month: null
+      path: null
+      policy: local
+      redis_database: 0
+      redis_host: null
+      redis_password: null
+      redis_port: 6379
+      redis_server_name: null
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      redis_username: null
+      second: null
+      sync_rate: -1
+      year: null
+    enabled: true
+    name: rate-limiting
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
+  - config:
+      add:
+        body: []
+        headers:
+        - Authorization:Basic U3VwZXJVc2VyOlNZUw==
+        querystring: []
+      append:
+        body: []
+        headers: []
+        querystring: []
+      http_method: null
+      remove:
+        body: []
+        headers: []
+        querystring: []
+      rename:
+        body: []
+        headers: []
+        querystring: []
+      replace:
+        body: []
+        headers:
+        - Authorization:Basic U3VwZXJVc2VyOlNZUw==
+        querystring: []
+        uri: null
+    enabled: true
+    name: request-transformer
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
+  port: 9092
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    name: uct-factories
+    path_handling: v0
+    paths:
+    - /GetFactories
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    name: uct-properties
+    path_handling: v0
+    paths:
+    - /Properties
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  write_timeout: 60000

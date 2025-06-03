@@ -1,2 +1,2 @@
 ### GetFactories
-curl 'http://localhost:8000/GetFactories' -H 'apikey: hello_world'
+curl 'http://localhost:8000/GetFactories' --user _SYSTEM:SYS
