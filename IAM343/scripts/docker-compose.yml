@@ -69,7 +69,7 @@ services:
         protocol: tcp
     restart: on-failure
     volumes:
-      - ./volumes/kong:/usr/local/kong/
+      - ./volumes/kong:/tmp/
   db:
     image: postgres:14.5
     environment:
