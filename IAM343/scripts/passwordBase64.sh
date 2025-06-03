@@ -11,5 +11,4 @@ encoded=$(echo "$credentials" | base64)
 
 echo "Base64 : $encoded"
 
-
 echo $encoded | base64 --decode

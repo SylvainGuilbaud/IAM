@@ -1,0 +1,10 @@
+### Add basic authentication plugin 
+curl -X POST http://localhost:8001/plugins/ \
+  --header "accept: application/json" \
+  --header "Content-Type: application/json" \
+  --data '{
+    "name": "basic-auth",
+    "config": {
+      "hide_credentials": true
+    }
+  }'

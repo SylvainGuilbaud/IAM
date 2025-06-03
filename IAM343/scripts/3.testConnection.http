@@ -1,0 +1,12 @@
+### TestConnection
+curl 'http://localhost:8000/TestConnection' --user _SYSTEM:SYS
+
+### TestConnection without authentication
+curl 'http://localhost:8000/TestConnection' 
+
+
+### TestConnection without API Manager
+curl 'http://localhost:9092/api/uct/TestConnection' --user _SYSTEM:SYS
+
+### TestConnection without API Manager without authentication
+curl 'http://localhost:9092/api/uct/TestConnection' 

@@ -1,5 +1,19 @@
 ### Add a new consumer named 'alex'
-curl -X POST http://localhost:8001/consumers -d username=alex
+curl -X POST http://localhost:8001/consumers -d username=InventoryManager
 
-### Add a key-auth plugin to the consumer 'alex'
-curl -X POST http://localhost:8001/consumers/alex/key-auth -d key=hello_world
+# ### Add a key-auth plugin to the consumer 'alex'
+# curl -X POST http://localhost:8001/consumers/alex/key-auth -d key=hello_world
+
+### add a basic-auth plugin to the consumer 'alex'
+curl -X POST http://localhost:8001/consumers/InventoryManager/basic-auth \
+  -d username=InventoryManager \
+  -d password=demo
+
+### Add a new consumer named 'InventoryManager' with basic authentication
+curl -X POST http://localhost:8001/consumers \
+  --data "username=InventoryManager"
+
+### Add basic authentication to the consumer 'InventoryManager'
+curl -X POST http://localhost:8001/consumers/InventoryManager/basic-auth \
+  --data "username=InventoryManager" \
+  --data "password=demo"

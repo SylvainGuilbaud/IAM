@@ -1,0 +1,6 @@
+### Create a route for the UCT service Properties
+curl -i -X POST \
+--url http://localhost:8001/services/uct/routes \
+--data 'name=uct-test-connection' \
+--data 'paths=/TestConnection' \
+--data 'strip_path=false'

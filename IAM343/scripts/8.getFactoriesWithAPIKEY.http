@@ -1,2 +1,5 @@
 ### GetFactories
 curl 'http://localhost:8000/GetFactories' --user _SYSTEM:SYS
+
+### GetFactories with consumer InventoryManager 
+curl 'http://localhost:8000/GetFactories' --user InventoryManager
