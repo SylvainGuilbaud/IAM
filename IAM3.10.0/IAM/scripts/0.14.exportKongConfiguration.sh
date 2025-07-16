@@ -9,8 +9,8 @@ export KONG_ADMIN_PORT=8000
 # export in deck directory with the current configuration in a file named by the current date   
 export DECK_DIR=$(pwd)
 
-# get the current date in YYYY-MM-DD format
-CURRENT_DATE=$(date +%Y-%m-%d)  
+# get the current date in YYYY-MM-DD_HH24-MI-SS format
+CURRENT_DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
 # set the output file name
 OUTPUT_FILE="${DECK_DIR}/kong-${CURRENT_DATE}.yaml"
