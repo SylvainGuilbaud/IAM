@@ -19,3 +19,6 @@ OUTPUT_FILE="${DECK_DIR}/kong-${CURRENT_DATE}.yaml"
 
 # deck gateway dump --kong-addr http://$KONG_ADMIN_HOST:$KONG_ADMIN_PORT -o $OUTPUT_FILE
 deck gateway dump -o $OUTPUT_FILE 
+
+# alias the output file to kong.yaml for easier access
+ln -sf $OUTPUT_FILE ${DECK_DIR}/kong.yaml
