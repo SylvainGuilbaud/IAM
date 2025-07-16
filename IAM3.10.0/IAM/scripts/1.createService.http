@@ -1,0 +1,5 @@
+### Create a new service in Kong for the UCT application
+curl -i -X POST \
+--url http://localhost:8001/services/ \
+--data 'name=uct' \
+--data 'url=http://192.168.65.1:9092/api/uct/'

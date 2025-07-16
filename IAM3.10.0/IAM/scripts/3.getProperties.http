@@ -1,0 +1,2 @@
+### Properties
+curl 'http://localhost:8000/Properties' --user _SYSTEM:SYS

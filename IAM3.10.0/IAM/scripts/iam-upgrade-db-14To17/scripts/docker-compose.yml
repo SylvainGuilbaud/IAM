@@ -1,0 +1,12 @@
+services:
+  db-migration:
+    build: .
+    environment:
+      PGUSER: ${KONG_PG_USER:-iam}
+    volumes:
+      - 'pgdata14:/var/lib/postgresql/14/data'
+      - 'pgdata17:/var/lib/postgresql/17/data'
+    stdin_open: true
+volumes:
+  pgdata14:
+  pgdata17:

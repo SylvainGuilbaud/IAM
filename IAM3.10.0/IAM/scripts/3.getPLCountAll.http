@@ -1,0 +1,6 @@
+### GetPLCountAll
+curl 'http://localhost:8000/GetPLCountAll' --user _SYSTEM:SYS
+
+
+### GetPLCountAll
+curl 'http://localhost:8000/GetPLCountAll' 

@@ -1,0 +1,2 @@
+### Delete a Request Transformer Plugin from a Route
+curl -X DELETE http://localhost:8001/plugins/request-transformer

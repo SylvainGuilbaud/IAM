@@ -1,0 +1,9 @@
+### Activate IAM license in IRIS
+curl -i -X POST http://localhost:8001/licenses/ \
+    --header "Accept: application/json" \
+    --header "Content-Type: application/json" \
+    --data '
+    {
+      "payload": "{\"license\":{\"version\":1,\"signature\":\"9ff4d50725e7592f2f4c3e3126115443212e0404dd389239d1f3a433f10b038f054298b61161a8d91a968987a7421cf060185e42dbe1dab266b254cb2e285a3b\",\"payload\":{\"customer\": \"InterSystems\",\"license_creation_date\": \"2024-11-22\",\"product_subscription\": \"Kong Enterprise Subscription\",\"support_plan\": \"Platinum\",\"admin_seats\": \"Unlimited\",\"dataplanes\": \"\",\"license_expiration_date\": \"2025-11-22\",\"license_key\": \"0011K000024ecJ8QAI_a1VPJ00000192hx2AA\"}}}"
+    }
+    '

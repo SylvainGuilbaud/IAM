@@ -1,0 +1,10 @@
+```http
+### Check IAM license in IRIS
+curl -i -X GET http://192.168.65.1:9092/api/iam/license --user IAM:AAA
+
+### Check IAM license in IRIS
+curl -i -X GET http://127.0.0.1:9092/api/iam/license --user IAM:AAA
+
+
+### Check IAM license in IRIS
+curl -i -X GET http://127.0.0.1/iris/api/iam/license --user IAM:IAM

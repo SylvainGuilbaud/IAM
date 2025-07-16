@@ -1,0 +1,6 @@
+### Create a route for the UCT service Factories
+curl -i -X POST \
+--url http://localhost:8001/services/uct/routes \
+--data 'name=uct-factories' \
+--data 'paths=/GetFactories' \
+--data 'strip_path=false'
