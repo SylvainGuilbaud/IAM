@@ -20,3 +20,5 @@ export ISC_IAM_IMAGE=localhost/intersystems/iam-arm64:3.10.0.2-15852
 export ISC_IRIS_URL=http://${ISC_IRIS_USERNAME}:${ISC_IRIS_PASSWORD}@${ISC_IRIS_HOSTNAME}:${ISC_IRIS_PORT}/api/iam/license
 
 # export ISC_IRIS_URL=http://${ISC_IRIS_USERNAME}:${ISC_IRIS_PASSWORD}@${ISC_IRIS_HOSTNAME}:${ISC_IRIS_PORT}${ISC_IRIS_PREFIX}/api/iam/license
+
+export KONNECT_PROXY_URL='http://localhost:8000'

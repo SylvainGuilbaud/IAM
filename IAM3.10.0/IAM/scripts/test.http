@@ -16,6 +16,12 @@ curl 'http://localhost:8000/api/atelier/' --user _SYSTEM:SYS
 ### API Atelier
 curl 'http://localhost:8000/iris-sco-uct-demo/api/atelier/' --user _SYSTEM:SYS
 
+### mock anything
+curl http://localhost:8000/mock/anything 
+
+### mock anythin wit a valid key in the apikey header
+curl http://localhost:8000/mock/anything --header "apikey:top-secret-key"
+
 ### Create a new service in Kong for the UCT application
 curl -i -X POST \
 --url http://localhost:8001/services/ \
