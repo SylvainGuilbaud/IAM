@@ -9,6 +9,8 @@ curl -i -X GET http://127.0.0.1:9092/api/iam/license --user IAM:AAA
 ### Check IAM license
 curl -i -X GET http://127.0.0.1:9093/api/iam/license --user IAM:AAA
 
+### get Kong license
+curl -i -X GET http://localhost:8001/licenses/ --user admin:admin
 
 ### API Atelier
 curl 'http://localhost:8000/api/atelier/' --user _SYSTEM:SYS
@@ -80,6 +82,8 @@ curl -i -X DELETE \
 
 ### get Prometheus metrics
 curl -X GET http://localhost:8001/metrics
+
+
 
 ### Add basic authentication plugin to the UCT service
 curl -i -X POST \
