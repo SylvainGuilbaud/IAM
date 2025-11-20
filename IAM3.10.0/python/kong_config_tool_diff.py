@@ -33,10 +33,28 @@ def setup_logging(log_file=None):
     for handler in handlers:
         logger.addHandler(handler)
 
+def find_latest_export_file(deck_dir):
+    export_files = sorted(
+        deck_dir.glob("kong-*.yaml"),
+        key=os.path.getmtime,
+        reverse=True
+    )
+
+    pattern = re.compile(r"kong-\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}\.yaml")
+    for file in export_files:
+        if pattern.fullmatch(file.name):
+            return file
+    return None
+
 def export_kong_config():
     deck_dir = Path.cwd()
     current_date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     output_file = deck_dir / f"kong-{current_date}.yaml"
+
+    # Trouver le dernier fichier d'export
+    previous_export = find_latest_export_file(deck_dir)
+    if previous_export:
+        logger.info(f"Previous export found: {previous_export}")
 
     try:
         logger.info(f"Exporting Kong config to: {output_file}")
@@ -48,7 +66,6 @@ def export_kong_config():
             text=True
         )
 
-        # Log and print deck output
         logger.debug(result.stdout)
         logger.debug(result.stderr)
         print(result.stdout)
@@ -59,6 +76,17 @@ def export_kong_config():
             symlink_path.unlink()
         symlink_path.symlink_to(output_file.name)
         logger.info(f"Symlink created/updated: {symlink_path} -> {output_file.name}")
+
+        # TODO: Générer un rapport de différences
+        if previous_export:
+            diff_file = deck_dir / f"diff-{previous_export.stem}-vs-{output_file.stem}.txt"
+            subprocess.run(
+                ["diff", "-u", str(previous_export), str(output_file)],
+                stdout=diff_file.open("w"),
+                stderr=subprocess.PIPE,
+                text=True
+            )
+            logger.info(f"Diff report generated: {diff_file}")
 
     except subprocess.CalledProcessError as e:
         logger.error(f"Export failed: {e}")
@@ -101,8 +129,8 @@ def main():
             "Tool to export or import Kong Gateway configuration using deck.\n\n"
             "Exactly one of the options --export or --import is required.\n\n"
             "Examples:\n"
-            "  python kong_config_tool.py --export --log\n"
-            "  python kong_config_tool.py --import --log\n\n"
+            "  python kong_config_tool.py --export --log export.log\n"
+            "  python kong_config_tool.py --import --log import.log\n\n"
             "For help, run:\n"
             "  python kong_config_tool.py --help"
         ),

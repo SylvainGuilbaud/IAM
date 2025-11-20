@@ -1,4 +1,3 @@
-version: '3.2'
 services:
   iam-migrations:
     image: ${ISC_IAM_IMAGE}
@@ -19,7 +18,6 @@ services:
       - db:db
   iam:
     image: ${ISC_IAM_IMAGE}
-    container_name: iam
     depends_on:
       - db
     environment:
@@ -39,6 +37,8 @@ services:
       KONG_PORTAL_GUI_PROTOCOL: http
       KONG_PORTAL_GUI_HOST: '127.0.0.1:8003'
       KONG_ADMIN_GUI_URL: http://localhost:8002
+      KONG_VITALS: 'on'
+      KONG_ADMIN_GUI_HIDE_KONNECT_CTA: 'on'
       ISC_IRIS_URL: ${ISC_IRIS_URL}
       ISC_CA_CERT: ${ISC_CA_CERT}
     links:
@@ -69,16 +69,14 @@ services:
         published: 8445
         protocol: tcp
     restart: on-failure
-    volumes:
-      - ./volumes/kong:/tmp/
   db:
-    image: postgres:14.5
+    image: postgres:17.4
     environment:
       POSTGRES_DB: ${KONG_PG_DATABASE:-iam}
       POSTGRES_PASSWORD: ${KONG_PG_PASSWORD:-iam}
       POSTGRES_USER: ${KONG_PG_USER:-iam}
     volumes:
-      - 'pgdata14:/var/lib/postgresql/data'
+      - 'pgdata17:/var/lib/postgresql/data'
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "${KONG_PG_USER:-iam}"]
       interval: 30s
@@ -87,4 +85,4 @@ services:
     restart: on-failure
     stdin_open: true
 volumes:
-  pgdata14:
+  pgdata17:

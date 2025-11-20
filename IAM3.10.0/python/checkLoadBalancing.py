@@ -102,6 +102,7 @@ if not up_found:
 start_time = time.time()
 log_to_file("📡 Sending requests to mock server...")
 for _ in range(REQUESTS_COUNT):
+    print(".", end="", flush=True)
     run_cmd("curl -s http://localhost:8000/iris/api/atelier/ --user _system:SYS")
 elapsed_time = time.time() - start_time
 log_to_file(f"✅ Sent {REQUESTS_COUNT} requests in {elapsed_time:.2f} seconds.")
@@ -111,8 +112,8 @@ log_json = run_cmd("docker exec iam cat /tmp/file.log")
 logs = [json.loads(line) for line in log_json.splitlines()]
 ports = [port for log in logs if "tries" in log for port in [t.get("port") for t in log["tries"] if "port" in t]]
 
-nginx1 = ports.count(9093)
-nginx2 = ports.count(9094)
+nginx1 = ports.count(9080)
+nginx2 = ports.count(9082)
 
 log_to_file("📊 Number of responses received from each NGINX server:")
 log_to_file(f"  🔹 NGINX1 (port 9093): {nginx1}")
